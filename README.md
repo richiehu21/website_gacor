@@ -30,7 +30,7 @@ Trevan:
 Richie:
 <ul>
     <li>pelajari_lebih_lanjut.html</li>
-    <li>idex.html</li>
+    <li>index.html</li>
     <li>contact.html</li>
     <li>about.html</li>
 </ul>
