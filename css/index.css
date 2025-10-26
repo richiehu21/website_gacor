@@ -2,11 +2,6 @@ body {
     box-sizing: border-box;
     background-color: rgb(255, 251, 251);
 }
-/* header{
-    text-align: center;
-    font-size: 36px;
-    color: #272626;
-} */
 
 header img {
     filter: drop-shadow(0 0 1px black);
@@ -21,7 +16,7 @@ header img {
 }
 
 li > a {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace !important;
 }
 
 main {
