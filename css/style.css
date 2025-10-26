@@ -20,10 +20,10 @@ header img {
     padding-inline: 1rem;
 }
 
-main {
-    margin-inline: 3%;
+li > a {
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.test {
-    color: black;
+main {
+    margin-inline: 3%;
 }
