@@ -1,0 +1,282 @@
+/* General Styling */
+:root {
+    --primary-color: #00bcd4; /* Biru Neon (sesuai logo) */
+    --secondary-color: #ffffff; /* Putih */
+    --dark-bg: #1a1a1a; /* Latar belakang gelap utama */
+    --mid-dark-bg: #222222; /* Latar belakang untuk elemen sekunder */
+    --text-color-light: #f5f5f5; /* Teks terang */
+    --text-color-muted: #aaaaaa; /* Teks agak pudar */
+    --button-hover-dark: #00a4b8;
+    --button-hover-light: #e0e0e0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark-bg);
+    color: var(--text-color-light);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+.main-header {
+    background-color: var(--mid-dark-bg);
+    padding: 15px 0;
+    border-bottom: 1px solid #333;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Sesuaikan tinggi logo Anda */
+    filter: drop-shadow(0 0 5px var(--primary-color)); /* Efek glow ringan untuk logo */
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 30px;
+}
+
+.main-nav ul li a {
+    color: var(--text-color-light);
+    font-weight: 500;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.user-actions .btn-primary,
+.user-actions .btn-secondary {
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.user-actions .btn-primary {
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+}
+
+.user-actions .btn-primary:hover {
+    background-color: var(--button-hover-dark);
+    color: var(--text-color-light);
+    text-decoration: none;
+}
+
+.user-actions .btn-secondary {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.user-actions .btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1600x600/111111/FFFFFF?text=Gaming+Setup+Background') no-repeat center center/cover; /* Ganti dengan gambar hero Anda */
+    text-align: center;
+    padding: 100px 0;
+    color: var(--secondary-color);
+}
+
+.hero-section h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(0, 188, 212, 0.7); /* Efek glow pada judul hero */
+}
+
+.hero-section p {
+    font-size: 1.3em;
+    margin-bottom: 40px;
+}
+
+.btn-primary-hero {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary-hero:hover {
+    background-color: var(--button-hover-dark);
+    transform: translateY(-3px);
+    text-decoration: none;
+    color: var(--text-color-light);
+}
+
+/* Featured Products */
+.featured-products {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.featured-products h2 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    color: var(--primary-color);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: var(--mid-dark-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 188, 212, 0.2);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.4em;
+    margin: 15px 0 10px;
+    color: var(--secondary-color);
+}
+
+.product-card .price {
+    font-size: 1.2em;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.btn-add-cart {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-add-cart:hover {
+    background-color: var(--button-hover-dark);
+    color: var(--text-color-light);
+    text-decoration: none;
+}
+
+/* Call to Action */
+.call-to-action {
+    background-color: var(--mid-dark-bg);
+    padding: 80px 0;
+    text-align: center;
+    margin-top: 60px;
+    border-top: 1px solid #333;
+}
+
+.call-to-action h2 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.call-to-action p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: var(--text-color-muted);
+}
+
+/* Footer */
+.main-footer {
+    background-color: var(--mid-dark-bg);
+    color: var(--text-color-muted);
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid #333;
+    margin-top: 40px;
+}
+
+.main-footer .footer-links a {
+    color: var(--text-color-muted);
+    margin: 0 10px;
+}
+
+.main-footer .footer-links a:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        margin-top: 15px;
+    }
+    .main-nav ul li {
+        margin: 5px 0;
+    }
+    .user-actions {
+        margin-top: 15px;
+    }
+    .hero-section h1 {
+        font-size: 2.5em;
+    }
+    .hero-section p {
+        font-size: 1em;
+    }
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}

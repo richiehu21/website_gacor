@@ -2,7 +2,35 @@
 <hr>
 <h1>Harus segiap sebelum tanggal 9 Nov 2025<h1>
 jangan push di main branch
+<br>
+Surya:
 <ul>
-    <li>untuk background color bisa menggunakan "background-color: rgb(255, 251, 251)";</li>
-    <li>ini edited by Trevan</li>>
+    <li>point.html</li>
+    <li>voucher.html</li>
+    <li>summary.html</li>
+    <li>pembayaran.html (proses bayar)</li>
+</ul>
+
+Anthony:
+<ul>
+    <li>promo.html</li>
+    <li>games.html</li>
+    <li>history.html</li>
+    <li>faq.html</li>
+</ul>
+
+Trevan:
+<ul>
+    <li>login.html</li>
+    <li>profile.html</li>
+    <li>reset_pass.html</li>
+    <li>register.html</li>
+</ul>
+
+Richie:
+<ul>
+    <li>pelajari_lebih_lanjut.html</li>
+    <li>index.html</li>
+    <li>contact.html</li>
+    <li>about.html</li>
 </ul>
