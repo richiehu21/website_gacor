@@ -1,0 +1,42 @@
+body {
+    box-sizing: border-box;
+    background-color: rgb(255, 251, 251);
+}
+
+li > a {
+    font-family: 'Courier New', Courier, monospace !important;
+    text-decoration: none;
+    color: #000000;
+}
+
+main {
+    margin-inline: 3%;
+}
+
+/* ------------- bagian navbar ------------- */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0,0.1);
+    padding-inline: 1rem;
+}
+
+.logo {
+    filter: drop-shadow(0 0 1px black);
+    margin-right: 20px; 
+}
+
+.profile_icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0px 5px 0px 5px;
+}
+
+.nav-item { /* ini buat menghilangkan dot dibagian kiri button */
+    list-style: none;;
+}
+
+/* ------------- penutup bagian navbar ------------- */
