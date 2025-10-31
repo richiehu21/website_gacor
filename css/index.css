@@ -18,11 +18,33 @@ main {
     margin-inline: 3%;
 }
 
+/* ------------- bagian Banner ------------- */
+.banner {
+    width: 60%;
+    margin-top: 30px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    display: block; 
+    border-radius: 1rem;
+}
+
+.audiowide-regular {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex; 
+  justify-content: center;
+  margin-top: 15px;
+  font-size: 30px;
+}
+
+/* ------------- Penutup Banner ------------- */
+
  /* ------------- bagian icon icon game ------------- */
 .container {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 10px;
     flex-wrap: wrap;
 }
 
