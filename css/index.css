@@ -59,3 +59,15 @@ main {
 .custom-border {
     border: 2px solid #000000;
 }
+
+.profile_icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0px 5px 0px 5px;
+}
+
+.nav-item { /* ini buat menghilangkan dot dibagian kiri button */
+    list-style: none;;
+}
