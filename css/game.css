@@ -11,6 +11,7 @@ html {
 
 :root {
     --box-color :rgba(144, 20, 188,.8);
+    --border-clr:rgb(232, 227, 255);
 }
 
 body {
@@ -22,7 +23,6 @@ body {
     align-items: center;
     height: 50vh;
     background-color: #000;
-    /* z-index: 1; */
     background-image: url('../asset/logo_game/mlbb-kagura.png');
     background-size: cover;
     background-position: center;
@@ -36,37 +36,40 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    /* height: 1000px; */
     background-color: whitesmoke;
     top: 40vh;
-    /* z-index: 2; */
-    border-radius: 1rem 1rem 0 0;
+    border-radius: 50px 50px 0 0;
     padding: 1rem;
     color: whitesmoke;
-
+    box-shadow: 0 -3px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* ===== INPUT ID ====== */
 
-.content .input-id-container,
-.content .input-nominal-container {
+.content .input-container {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan agar terlihat "mengambang" */
-
+    width: 100%;
+    margin-inline: .3rem;
+    position: relative;
+    padding: 1rem 1rem 2rem 1rem;
+    background-color: var(--box-color);
+    border-radius: 16px; 
 }
 
-.content .input-id-container {
-    position: relative;
+.content .input-container .title {
+    margin-left: 1.5rem;
+}
+
+.content .input-container .input-id-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 60%;
-    background-color: var(--box-color);
-    padding: 3rem;
-    border-radius: 1rem;    
+    /* width: 60%; */
+    
 
 }
 
-.content .input-id-container::before,.input-nominal-container::before {
+.content .input-container::before {
     content: '1';
     position: absolute;
     display: flex;
@@ -82,45 +85,51 @@ body {
     font-size: 1.5em;
     box-shadow: 0 2px 4px rgba(0, 0, 0,.2);
 }
-.input-nominal-container::before {
+
+.content .input-container.nominal-section::before {
     content: '2';
 }
 
-.content .input-id-container .input-group {
-    display: flex;
-    flex-direction: column;
-    width: 40%;
+.content .input-container.pay-section::before {
+    content: '3';
 }
 
-.content .input-id-container .input-group p {
+.content .id-section .input-group {
+    display: flex;
+    flex-direction: column;
+    /* width: 50%; */
+    padding-right: .3rem;
+}
+
+.content .id-section .input-group p {
     margin-bottom: 10px;
     font-weight: bold;
 }
 
-.content .input-id-container .input-group .input-wrapper {
+.content .id-section .input-group .input-wrapper {
     display: flex;
     align-items: center;
     position: relative;
 }
 
-.content .input-id-container .input-group .input-wrapper .icon {
+.content .id-section .input-group .input-wrapper .icon {
     position: absolute;
-    left: 5%;
+    left: 2%;
     top: 28%;
 }
 
-.content .input-id-container .input-group .input-wrapper .limit {
+.content .id-section .input-group .input-wrapper .limit {
     position: absolute;
     right: 5%;
     font-size: .8rem;
     color: rgba(245, 245, 245,.5);
 }
 
-.content .input-id-container .input-group input {
-    background: rgba(245, 245, 245,.5);
+.content .id-section .input-group input {
+    background-color: rgba(245, 245, 245,.5);
     color: rgb(245, 245, 245);
     padding: 1rem 3rem;
-    border-radius: 1rem;
+    border-radius: 16px;
     outline: none;
     border: none;
     flex-grow: 1;
@@ -128,7 +137,7 @@ body {
     font-size: 1rem;
 }
 
-.content .input-id-container .input-group input::placeholder{
+.content .id-section .input-group input::placeholder{
     color: rgba(245, 245, 245,.7);
 
 }
@@ -137,35 +146,86 @@ body {
 
 
 /* ===== INPUT NOMINAL ====== */
-.input-nominal-container {
-    position: relative; 
-    width: 80%; 
-    /* margin-top: 2rem;  */
-    padding: 2rem; 
-    background-color: var(--box-color); 
-    border-radius: 1rem;
+a {
+    text-decoration: none;
 }
 
-.input-nominal-container .list-diamond .card {
+.card {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
     padding: 0;
+    padding-top: 8% ;
+    height: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 3px solid var(--border-clr);
+    background-color: rgb(255, 255, 255);
 }
 
-.input-nominal-container .list-diamond .card .card-bottom {
-    background-color: whitesmoke;
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+}
+
+.nominal-section .list-diamond .card > p{
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.nominal-section .list-diamond .card .img-container {
+    width: 50%;
+}
+
+.nominal-section .list-diamond .card .img-container img {
+    width: 100%;
+}
+
+.nominal-section .list-diamond .card .card-bottom {
+    background-color: rgb(246, 245, 252);
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding-right: 10%;
+    padding: 6% 6% 6% 0;
 }
 
-.input-nominal-container .list-diamond .card .card-bottom p {
-    color: rgb(254, 143, 161); 
+.nominal-section .list-diamond .card .card-bottom p {
+    color: rgb(240 ,99 ,131);
     margin: 0;
     font-size: .8rem;
 }
 
-.input-nominal-container .list-diamond .card .card-bottom p.harga {
+.nominal-section .list-diamond .card .card-bottom p.harga {
     font-weight: bold;
     font-size: 1.2rem;
 }
+
+.nominal-section .list-diamond .card .card-bottom .diskon .persen {
+    background-color: greenyellow;
+    border-radius: 16px;
+    padding: .1rem .3rem;
+    background-color: rgb(213, 247, 219);
+    color: rgb(8, 173, 54);
+    font-weight: bold;
+    font-size: .7rem;
+}
+
+.nominal-section .list-diamond .card .card-bottom .diskon .af-diskon {
+    text-decoration: line-through;
+    color: rgb(145 ,141, 161);
+    font-size: .7rem;
+
+}
+
+/* ==== PILIH PEMBAYARAN ===== */
+.pay-section .card {
+    padding-left: 1rem;
+    align-items: flex-start;
+}
+
+.pay-section .card .pay-img {
+    margin-bottom: .5rem;
+}
+/* ==== PILIH PEMBAYARAN END ===== */
