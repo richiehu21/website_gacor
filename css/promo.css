@@ -1,0 +1,75 @@
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --font-clr :blue;
+}
+
+body{
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+section {
+    margin-inline: 10%;
+}
+
+table, th, td {
+  border: 1px solid rgba(0, 0, 0,.1); 
+  border-collapse: collapse; 
+}
+thead {
+    font-weight: bold;
+}
+th, td {
+  padding: 8px; 
+  text-align: left;
+}
+
+.bagian-1 .img-container {
+    width: 100%;
+    height: fit-content;
+}
+
+.bagian-1 .img-container > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bagian-1 .prd-promo {
+    background-color: rgba(0, 255, 255,.2);
+    color: var(--font-clr);
+    width: fit-content;
+    padding: .5rem 1rem;
+    border-radius: 16px;
+}
+
+.bagian-1 .info-promo {
+    display: flex;
+}
+
+.bagian-1 .info-promo > svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.bagian-2 h2 {
+    margin-top: 5rem;
+}
+
+.bagian-2 .table-container {
+    overflow-y: auto;
+}
+
+.bagian-2 .promo-terms {
+    margin-top: 3rem;
+}
+
+.bagian-2 .promo-terms li {
+    margin-bottom: 10px;
+}
