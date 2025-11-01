@@ -1,0 +1,135 @@
+/* ------------- bagian navbar ------------- */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0,0.1);
+    padding-inline: 1rem;
+}
+
+.logo {
+    filter: drop-shadow(0 0 1px black);
+    margin-right: 20px; 
+}
+
+.profile_icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0px 5px 0px 5px;
+}
+
+.nav-item { /* ini buat menghilangkan dot dibagian kiri button */
+    list-style: none;
+}
+
+.navbar li > a {
+    font-family: 'Courier New', Courier, monospace !important;
+    text-decoration: none;
+    color: #000000;
+}
+
+/* ------------- Penutup navbar ------------- */
+
+/* ------------- bagian main ------------- */
+
+main {
+    background:
+        linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
+        url("../asset/bgwallpaper.png") repeat center center;
+    
+    padding-top: 50px; 
+    padding-bottom: 100px;
+    min-height: 100vh; 
+}
+
+.container {
+    background-color: rgba(180, 180, 180, 1);
+    border-radius: 10px;
+    width: 800px;
+    box-shadow: 5px 10px 8px #000000;
+    max-width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.container .logo {
+    display: flex;
+    justify-content: center;
+}
+
+.isi_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* ------------- Penutup main ------------- */
+
+/* ------------- bagian Footer ------------- */
+
+.footer {
+  background-color: rgb(234, 228, 228);
+  padding: 40px 40px 0px 40px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.container_1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer_container {
+  flex: 1;
+  min-width: 220px;
+}
+
+.container_title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.container_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container_list li a,
+.contailer_list li a {
+  text-decoration: none;
+  color: black;
+}
+
+.container_list li a:hover,
+.contailer_list li a:hover {
+  text-decoration: underline;
+}
+
+.footer_img {
+  width: 28px;
+  margin-right: 10px;
+  transition: transform 0.2s;
+}
+
+.footer_img:hover {
+  transform: scale(1.1);
+}
+
+/* Copyright di bawah */
+.footer_copyright {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #bfbfbf;
+}
+
+/* ------------- Penutup Footer ------------- */
