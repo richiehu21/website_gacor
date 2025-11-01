@@ -28,6 +28,11 @@ main {
     padding-inline: 1rem;
 }
 
+.logo {
+    filter: drop-shadow(0 0 1px black);
+    margin-right: 20px; 
+}
+
 .profile_icon {
     width: 32px;
     height: 32px;
@@ -37,10 +42,16 @@ main {
 }
 
 .nav-item { /* ini buat menghilangkan dot dibagian kiri button */
-    list-style: none;;
+    list-style: none;
 }
 
-/* ------------- penutup bagian navbar ------------- */
+.navbar li > a {
+    font-family: 'Courier New', Courier, monospace !important;
+    text-decoration: none;
+    color: #000000;
+}
+
+/* ------------- Penutup navbar ------------- */
 
 
 /* ================================================== */
