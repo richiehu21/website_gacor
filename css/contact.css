@@ -56,9 +56,30 @@ main {
     justify-content: center;
     width: 90%;
     max-width: 500px;
+    margin: 50px auto;
+    padding-top: 20px;
+    padding-bottom: 20px
+}
+
+.container_contact {
+    font-family: "AudioWide", sans-serif;
+    background-color: rgba(180, 180, 180, 0.8);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    max-width: 500px;
     margin: 20px auto;
     padding-top: 20px;
     padding-bottom: 20px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.container_contact img {
+    border-radius: 50%;
+    width: 10%;
+    margin: 10px;
 }
 
 .form-grup label {
