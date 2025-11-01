@@ -1,0 +1,205 @@
+body {
+    box-sizing: border-box;
+    background:
+    linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
+    url("../asset/bgwallpaper.png") repeat;
+    
+}
+
+header img {
+    filter: drop-shadow(0 0 1px black);
+    margin-right: 20px; 
+}
+
+li > a {
+    font-family: 'Courier New', Courier, monospace !important;
+}
+
+main {
+    margin-inline: 3%;
+}
+
+
+/* ------------- bagian navbar ------------- */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0,0.1);
+    padding-inline: 1rem;
+    z-index: 40;
+    background-color: #f6f6f6;
+}
+
+.logo {
+    filter: drop-shadow(0 0 1px black);
+    margin-right: 20px; 
+}
+
+.profile_icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0px 5px 0px 5px;
+}
+
+.nav-item { /* ini buat menghilangkan dot dibagian kiri button */
+    list-style: none;
+}
+
+.navbar li > a {
+    font-family: 'Courier New', Courier, monospace !important;
+    text-decoration: none;
+    color: #000000;
+}
+
+/* ------------- Penutup navbar ------------- */
+
+/* ================================================== */
+/* ===== SEMUA KODE CSS LOGIN BARU DIMULAI DARI SINI ===== */
+/* ================================================== */
+
+.register-container {
+    z-index: 1;
+    width: 500px;
+    margin: 80px auto;
+    padding: 30px;
+    background-color: rgba(164, 183, 175, 0.907);
+    box-shadow: 1px 8px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+}
+.register-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+.register-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+.register-container input[type="text"],
+.register-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f9f9f9;
+}
+.register-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+}
+.register-container button:hover {
+    background-color: #218838;
+}
+
+.register-link {
+    margin-top: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.register-text-line2 {
+    display: block; 
+    /* === ATUR JARAK DI SINI === */
+    margin-top: -5px;
+}
+
+/* ===================PENUTUP LOGIN=============================== */
+
+/* ================================================== */
+/* ===== SEMUA KODE CSS LOGO JATUH DIMULAI DARI SINI ===== */
+/* ================================================== */
+
+.logo-fall-container {
+    position: fixed; /* Tetap di posisi yang sama saat di-scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Sembunyikan logo yang keluar dari layar */
+    z-index: 0; /* Letakkan di belakang konten utama */
+}
+/* Style untuk setiap logo */
+.falling-logo {
+    position: absolute;
+    top: -15%; /* Mulai dari luar layar bagian atas */
+    width: 50px; /* Atur ukuran logo */
+    height: auto;
+    opacity: 0.7;
+    
+    /* Terapkan animasi */
+    animation: fall linear infinite;
+
+}
+
+@keyframes fall{
+    to {
+        transform: translateY(115vh) rotate(360deg);
+        opacity: 0.5;
+    }
+}
+/* MEMBERI VARIASI PADA SETIAP LOGO */
+.falling-logo:nth-child(1) {
+    left: 10%; /* Posisi horizontal */
+    animation-duration: 15s; /* Kecepatan jatuh */
+    animation-delay: -7s; /* Mulai animasi di tengah jalan */
+}
+.falling-logo:nth-child(2) {
+    left: 20%;
+    animation-duration: 10s;
+    animation-delay: -5s;
+    width: 30px; /* Ukuran berbeda */
+}
+.falling-logo:nth-child(3) {
+    left: 30%;
+    animation-duration: 20s;
+    animation-delay: 0s;
+}
+.falling-logo:nth-child(4) {
+    left: 40%;
+    animation-duration: 12s;
+    animation-delay: -10s;
+}
+
+.falling-logo:nth-child(5) {
+    left: 50%;
+    animation-duration: 18s;
+    animation-delay: -4s;
+    width: 40px;
+}
+.falling-logo:nth-child(6) {
+    left: 60%;
+    animation-duration: 14s;
+    animation-delay: -6s;
+}
+.falling-logo:nth-child(7) {
+    left: 70%;
+    animation-duration: 16s;
+    animation-delay: -8s;
+    width: 60px;
+}
+.falling-logo:nth-child(8) {
+    left: 80%;
+    animation-duration: 11s;
+    animation-delay: -3s;
+}
+.falling-logo:nth-child(9) {
+    left: 90%;
+    animation-duration: 13s;
+    animation-delay: -9s;
+    width: 35px;
+}
+/* ===================PENUTUP LOGO JATUH=============================== */
