@@ -1,6 +1,7 @@
 body {
     box-sizing: border-box;
     background-color: rgb(255, 251, 251);
+    margin : 0;
 }
 
 li > a {
@@ -10,7 +11,13 @@ li > a {
 }
 
 main {
-    margin-inline: 3%;
+    padding-top: 1px;
+    padding-inline: 3%;
+    background:
+        linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
+        url("../asset/bgwallpaper.png") repeat center center;
+    padding-bottom: 100px;
+    border-radius: 1rem;
 }
 
 /* ------------- bagian navbar ------------- */
@@ -40,3 +47,113 @@ main {
 }
 
 /* ------------- penutup bagian navbar ------------- */
+
+/* ------------- pembuka bagian Main ------------- */
+.container {
+    background-color: rgba(180, 180, 180, 0.8);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.form-grup label {
+    font-family: "Audiowide", sans-serif;
+}
+
+.form-grup {
+    margin-bottom: 15px; /* Memberi jarak antar grup form */
+}
+
+.form-grup input[type="text"],
+.form-grup input[type="email"] {
+    width: 300px;           /* Menentukan lebar input */
+    padding: 10px;          /* Memberi ruang di dalam kotak input */
+    border: 1px solid #ccc; /* Memberi border abu-abu */
+    border-radius: 5px;     /* Membuat sudutnya sedikit melengkung */
+    font-size: 16px;        /* Ukuran font di dalam input */
+    box-sizing: border-box; /* Pastikan padding tidak menambah lebar */
+    font-family: "Audiowide", sans-serif;
+}
+
+.form-grup input[type="text"]:focus,
+.form-grup input[type="email"]:focus {
+    border-color: #007bff; /* Warna border berubah jadi biru */
+    outline: none; /* Menghilangkan 'outline' bawaan browser */
+    box-shadow: 0 0 5px rgba(0,123,255,0.7); /* Memberi efek bayangan biru */
+}
+
+.form-grup label {
+    display: flex;
+    justify-content: center;
+}
+
+#pesan {
+    height: 200px;
+}
+
+/* ------------- bagian footer ------------- */
+.footer {
+  background-color: rgb(234, 228, 228);
+  padding: 40px 40px 0px 40px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.container_1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer_container {
+  flex: 1;
+  min-width: 220px;
+}
+
+.container_title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.container_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container_list li a,
+.contailer_list li a {
+  text-decoration: none;
+  color: black;
+}
+
+.container_list li a:hover,
+.contailer_list li a:hover {
+  text-decoration: underline;
+}
+
+.footer_img {
+  width: 28px;
+  margin-right: 10px;
+  transition: transform 0.2s;
+}
+
+.footer_img:hover {
+  transform: scale(1.1);
+}
+
+/* Copyright di bawah */
+.footer_copyright {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #bfbfbf;
+}
