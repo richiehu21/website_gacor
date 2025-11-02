@@ -1,7 +1,32 @@
+/* ================================================== */
+/* ===== PENGATURAN DASAR & TEMA GELAP (DARK MODE) ===== */
+/* ================================================== */
+
 body {
     box-sizing: border-box;
-    background-color: rgb(255, 251, 251);
+    /* Warna latar belakang utama yang sangat gelap */
+    background-color: rgb(26, 26, 46); 
+    /* Warna teks default untuk seluruh halaman */
+    color: #f0f0f0;
     margin : 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Font sistem yang lebih modern */
+ background:
+        linear-gradient(rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.7)),
+        url("../asset/bgwallpaper.png") repeat center center;
+}
+
+/* Memastikan header, main, dan footer berada di atas animasi */
+header {
+    position: relative;
+    z-index: 3;
+}
+main {
+    position: relative;
+    z-index: 2;
+}
+.footer {
+    position: relative;
+    z-index: 2;
 }
 
 header img {
@@ -9,18 +34,29 @@ header img {
     margin-right: 20px; 
 }
 
+/* Mengganti font Courier New yang global menjadi lebih spesifik */
+.gametitle, 
+.footer {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Tautan dasar (sekarang diatur di bagian spesifik seperti footer) */
 li > a {
     font-family: 'Courier New', Courier, monospace !important;
     text-decoration: none;
-    color: #000000;
+    color: #f0f0f0; /* Warna teks terang */
+    transition: color 0.2s ease-in-out;
+}
+
+li > a:hover {
+    color: #00aaff; /* Warna aksen biru cerah */
 }
 
 main {
   padding-top: 1px;
   padding-inline: 3%;
-  background:
-    linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
-    url("../asset/bgwallpaper.png") repeat center center;
+  /* Menghapus background gambar dan gradien agar animasi logo terlihat */
+  background: transparent;
   padding-bottom: 100px;
 }
 
@@ -32,6 +68,7 @@ main {
     margin-right: auto; 
     display: block; 
     border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Memberi bayangan agar menonjol */
 }
 
 .audiowide-regular {
@@ -42,6 +79,7 @@ main {
   justify-content: center;
   margin-top: 15px;
   font-size: 30px;
+  color: #ffffff; /* Pastikan teks terlihat di background gelap */
 }
 
 /* ------------- Penutup Banner ------------- */
@@ -57,23 +95,26 @@ main {
 .gamecard {
     width: 180px;
     height: 245px;
-    background-color: #f0f0f0;
+    /* Warna kartu yang sedikit lebih terang dari background */
+    background-color: rgb(42, 42, 62); 
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    /* Bayangan yang disesuaikan untuk tema gelap */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    transition: transform 0.2s, box-shadow 0.2s;
     text-decoration: none;
     margin: 10px;
 }
 
 .gamecard:hover {
-  transform: scale(1.05); /* Sedikit membesar */
-  box-shadow: 0 0 20px rgba(0, 170, 255, 0.7); /* Efek glow biru */
+  transform: scale(1.05);
+  /* Efek glow biru yang sudah bagus, kita pertahankan */
+  box-shadow: 0 0 20px rgba(0, 170, 255, 0.7); 
 }
 
 .gamecard .gametitle {
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    color: #333;
+    /* Warna teks terang untuk judul game */
+    color: #f0f0f0; 
     margin-top: 10px;
 }
 
@@ -82,7 +123,7 @@ main {
 }
 
 .custom-border {
-    border: 2px solid #000000;
+    border: 2px solid #f0f0f0; /* Border terang */
 }
 
 /* ------------- penutup bagian icon icon game ------------- */
@@ -92,8 +133,40 @@ main {
 .navbar {
     display: flex;
     justify-content: space-between;
-    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0,0.1);
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
     padding-inline: 1rem;
+    /* Gradien diubah menjadi warna solid yang konsisten dengan tema */
+    background-color: #2a2a3e; 
+}
+
+/* Mengatur warna teks di navbar (Bootstrap override) */
+.navbar .nav-link {
+    color: #f0f0f0 !important;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #ffffff !important; /* Warna aksen saat di-hover atau aktif */
+}
+
+/* Mengatur warna teks "GUEST" (Bootstrap override) */
+.navbar .dropdown-toggle {
+    color: #f0f0f0 !important;
+}
+.navbar .dropdown-toggle:hover {
+    color: #00aaff !important;
+}
+
+/* Mengatur dropdown menu agar gelap */
+.dropdown-menu {
+    background-color: #2a2a3e;
+    border: 1px solid #444;
+}
+.dropdown-item {
+    color: #f0f0f0;
+}
+.dropdown-item:hover {
+    background-color: #00aaff;
+    color: #1a1a2e; /* Teks jadi gelap saat background hover terang */
 }
 
 .profile_icon {
@@ -108,11 +181,16 @@ main {
     list-style: none;;
 }
 
+.navbar-toggler { /* ini buat mengganti warna background hamburger */
+  background-color: rgb(79, 79, 114);
+}
+
 /* ------------- penutup bagian navbar ------------- */
 
 /* ------------- bagian footer ------------- */
 .footer {
-  background-color: rgb(234, 228, 228);
+  /* Warna footer disamakan dengan warna kartu/navbar */
+  background-color: #2a2a3e; 
   padding: 40px 40px 0px 40px;
   font-family: 'Courier New', Courier, monospace;
 }
@@ -134,6 +212,7 @@ main {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 15px;
+  color: #ffffff; /* Judul footer jadi putih */
 }
 
 .container_list {
@@ -142,15 +221,16 @@ main {
   margin: 0;
 }
 
-.container_list li a,
-.contailer_list li a {
+/* Perbaikan untuk typo 'contailer_list' dan pewarnaan link footer */
+.container_list li a {
   text-decoration: none;
-  color: black;
+  color: #f0f0f0; /* Tautan footer jadi terang */
+  font-family: 'Courier New', Courier, monospace !important; /* Pastikan font tetap */
 }
 
-.container_list li a:hover,
-.contailer_list li a:hover {
+.container_list li a:hover {
   text-decoration: underline;
+  color: #00aaff; /* Aksen biru saat di-hover */
 }
 
 .footer_img {
@@ -169,5 +249,111 @@ main {
   font-size: 14px;
   margin-top: 30px;
   padding-top: 15px;
-  border-top: 1px solid #bfbfbf;
+  border-top: 1px solid #444; /* Warna border yang lebih soft */
+  color: #aaaaaa; /* Warna teks copyright lebih redup */
 }
+
+
+/* ================================================== */
+/* ===== SEMUA KODE CSS LOGO JATUH DIMULAI DARI SINI ===== */
+/* ================================================== */
+
+.index-container {
+  position: relative;
+}
+
+.logo-fall-container {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; 
+    /* PERUBAHAN PENTING: Atur z-index ke 1 agar di belakang konten */
+    z-index: 1; 
+}
+
+/* Style untuk setiap logo */
+.falling-logo {
+    position: absolute;
+    top: -15%; 
+    width: 50px; 
+    height: auto;
+    opacity: 0.7;
+    animation: fall linear infinite;
+}
+
+@keyframes fall{
+    to {
+        transform: translateY(115vh) rotate(360deg);
+        opacity: 0.5;
+    }
+}
+/* VARIASI LOGO (Tidak diubah) */
+.falling-logo:nth-child(1) {
+    left: 10%; 
+    animation-duration: 15s; 
+    animation-delay: -7s; 
+}
+.falling-logo:nth-child(2) {
+    left: 20%;
+    animation-duration: 10s;
+    animation-delay: -5s;
+    width: 30px; 
+}
+.falling-logo:nth-child(3) {
+    left: 30%;
+    animation-duration: 20s;
+    animation-delay: 0s;
+}
+.falling-logo:nth-child(4) {
+    left: 40%;
+    animation-duration: 12s;
+    animation-delay: -10s;
+}
+
+.falling-logo:nth-child(5) {
+    left: 50%;
+    animation-duration: 18s;
+    animation-delay: -4s;
+    width: 40px;
+}
+.falling-logo:nth-child(6) {
+    left: 60%;
+    animation-duration: 14s;
+    animation-delay: -6s;
+}
+.falling-logo:nth-child(7) {
+    left: 70%;
+    animation-duration: 16s;
+    animation-delay: -8s;
+    width: 60px;
+}
+.falling-logo:nth-child(8) {
+    left: 80%;
+    animation-duration: 11s;
+    animation-delay: -3s;
+}
+.falling-logo:nth-child(9) {
+    left: 90%;
+    animation-duration: 13s;
+    animation-delay: -9s;
+    width: 35px;
+}
+.falling-logo:nth-child(10) {
+    left: 15%; 
+    animation-duration: 17s; 
+    animation-delay: -3s; 
+}
+.falling-logo:nth-child(11) {
+    left: 25%;
+    animation-duration: 11s;
+    animation-delay: -1s;
+    width: 45px; 
+}
+.falling-logo:nth-child(12) {
+    left: 75%;
+    animation-duration: 19s;
+    animation-delay: -5s;
+}
+/* ===================PENUTUP LOGO JATUH=============================== */
