@@ -16,6 +16,10 @@ body {
 }
 
 /* ------------- bagian navbar ------------- */
+header img {
+    filter: drop-shadow(0 0 1px black);
+    margin-right: 20px; 
+}
 
 .navbar {
     display: flex;
