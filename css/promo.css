@@ -2,7 +2,6 @@
 
 * {
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 :root {
@@ -11,7 +10,36 @@
 
 body{
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
+
+/* ------------- bagian navbar ------------- */
+header img {
+    filter: drop-shadow(0 0 1px black);
+    margin-right: 20px; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0,0.1);
+    padding-inline: 1rem;
+}
+
+.profile_icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0px 5px 0px 5px;
+}
+
+.nav-item { /* ini buat menghilangkan dot dibagian kiri button */
+    list-style: none;;
+}
+
+/* ------------- penutup bagian navbar ------------- */
 
 section {
     margin-inline: 15%;
@@ -73,3 +101,67 @@ th, td {
 .bagian-2 .promo-terms li {
     margin-bottom: 10px;
 }
+
+
+/* ------------- bagian footer ------------- */
+.footer {
+  background-color: rgb(234, 228, 228);
+  padding: 40px 40px 0px 40px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.container_1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer_container {
+  flex: 1;
+  min-width: 220px;
+}
+
+.container_title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.container_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container_list li a,
+.contailer_list li a {
+  text-decoration: none;
+  color: black;
+}
+
+.container_list li a:hover,
+.contailer_list li a:hover {
+  text-decoration: underline;
+}
+
+.footer_img {
+  width: 28px;
+  margin-right: 10px;
+  transition: transform 0.2s;
+}
+
+.footer_img:hover {
+  transform: scale(1.1);
+}
+
+/* Copyright di bawah */
+.footer_copyright {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #bfbfbf;
+}
+

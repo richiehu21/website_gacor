@@ -5,14 +5,9 @@
 }
 
 body {
-    margin: 0;
-    scroll-behavior: smooth;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    color: whitesmoke;
-    background: linear-gradient(180deg, #232526, #414345);
-    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    scroll-behavior: smooth;
     overflow-x: hidden;
-
 }
 
 /* ------------- bagian navbar ------------- */
@@ -42,84 +37,89 @@ header img {
 
 /* ------------- penutup bagian navbar ------------- */
 
-.lacak {
-    width: 100%;
-    background: linear-gradient(180deg, #232526, #414345);
-    padding: 2rem 3rem;
-    box-shadow: 0px 5px 15px rgba(255, 255, 255, .3);
+
+.bgn-ats {
+    height: 60vh;
+    margin-inline: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.lacak h1 {
-    margin: 0;
+.bgn-ats h1 {
+    font-size: 3rem;
     margin-bottom: 1rem;
 }
 
-.lacak .input-wrap {
-    display: flex;
-    flex-direction: column;
+.bgn-ats p {
+    font-size: 1.2rem;
 }
 
-.lacak .input-wrap label {
-    margin-bottom: .5rem;
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
 }
 
-.lacak .input-wrap input {
-    width: 50%;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    padding: .5rem 1rem;
-}
-
-.lacak svg{
-    width: 1rem;
-    margin-right: .3rem;
-    fill: whitesmoke;
-}
-
-.lacak button {
-    border: none;
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.3);
-    padding: .5rem 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1rem;
-    cursor: pointer;
-    font-weight: bold;
-    color: whitesmoke;
 }
 
 section {
-    margin-inline: 15%;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    box-shadow: 0 -5px 10px rgba(0,0,0,.1);
+    padding-block: 2rem;
+    background-color: aqua;
+    border-radius: 16px 16px 0 0;
+    animation: fadeInUp 0.8s ease 0.8s both;
 }
 
-.table-container {
-    overflow-x: auto;
-
-}
-
-table {
-    width: 100%;
+.q-a-wrapper {
+    margin: 1rem;
+    background-color: blanchedalmond;
     border-radius: 16px;
-    border-spacing: 0;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+
 }
 
-table .stat-suc {
-    padding: .4rem;
-    background-color: rgba(255, 255, 255, 0.3);
-    width: fit-content;
-    border-radius: 5px;
+.q-a-wrapper .quest{
+    padding: 1rem 2rem;
+    font-weight: bold;
 }
 
-th,td {
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 1rem;
+.q-a-wrapper .quest span {
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: .2rem;
 }
+
+.q-a-wrapper .quest p{
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+
+.q-a-wrapper .answer {
+    padding-left: 1rem;
+}
+
+.q-a-wrapper .card {
+    background: none;
+    border: none;
+}
+
+.q-a-wrapper a{
+    color: black;
+    text-decoration: none;
+}
+
 
 /* ------------- bagian footer ------------- */
 .footer {
@@ -182,4 +182,3 @@ th,td {
   padding-top: 15px;
   border-top: 1px solid #bfbfbf;
 }
-
