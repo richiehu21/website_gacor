@@ -1,0 +1,210 @@
+/* ================================== */
+/* CSS TEMA UTAMA (rast7-theme.css) */
+/* ================================== */
+body {
+    background-color: #FAFAFA; /* Latar belakang abu-abu sangat muda */
+    color: #333333; /* Teks gelap */
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    background:
+    linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
+    url("../asset/bgwallpaper.png") repeat center center;
+}
+
+header img {
+    filter: drop-shadow(0 0 1px black);
+    margin-right: 20px; 
+}
+
+/* ------------- bagian navbar ------------- */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0,0.1);
+    padding-inline: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.profile_icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0px 5px 0px 5px;
+}
+
+.nav-item { /* ini buat menghilangkan dot dibagian kiri button */
+    list-style: none;;
+}
+
+/* ------------- penutup bagian navbar ------------- */
+
+
+/* --- Tombol Utama (Bisa dipakai di semua halaman) --- */
+.btn-redeem {
+    background-color: #333333; /* Tombol hitam/abu tua */
+    border: none;
+    border-radius: 8px;
+    padding: 0.9rem 1rem;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #FFFFFF; /* Teks tombol putih */
+}
+.btn-redeem:hover {
+    background-color: #000000; /* Tombol jadi hitam pekat */
+}
+
+
+
+/* --- Bagian Footer Bawah (Global) --- */
+.sub-footer {
+    background-color: #FFFFFF; /* Footer putih */
+    color: #555555;
+    padding: 1.5rem 0;
+    font-size: 0.8rem;
+    border-top: 1px solid #E0E0E0; /* Garis batas */
+}
+.sub-footer-links a {
+    color: #555555;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+.sub-footer-links a:hover {
+    text-decoration: underline;
+}
+.footer-logo {
+    font-weight: 800;
+    font-size: 1rem;
+    color: #333;
+}
+
+/*
+ * CSS Khusus untuk Halaman Konfirmasi Pembayaran
+ * (payment-confirmation.css)
+ */
+
+/* Tata letak halaman utama */
+.payment-confirmation-section {
+    padding: 40px 0; /* Memberi spasi di atas dan bawah */
+}
+
+/* Kartu utama yang membungkus konten (pengganti modal) */
+.payment-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    /* Tidak perlu max-width karena sudah diatur oleh col-lg-7 */
+}
+
+/* Bagian Header Kartu */
+.payment-card-header {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid #E0E0E0;
+}
+.payment-card-header h5 {
+    font-weight: 700;
+}
+
+/* Bagian Body Kartu */
+.payment-card-body {
+    padding: 1.5rem;
+}
+
+/* Bagian Footer Kartu */
+.payment-card-footer {
+    background-color: #FAFAFA; /* Sedikit beda agar terpisah */
+    padding: 1.5rem;
+    border-top: 1px solid #E0E0E0;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+/* --- Style-style di bawah ini disalin dari modal sebelumnya --- */
+/* --- dan berfungsi sama persis --- */
+
+/* --- Kotak Item (28 Diamonds) --- */
+.item-box {
+    display: flex;
+    align-items: center;
+    background-color: #F1F1F1; /* Abu-abu muda dari tema */
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.item-icon {
+    font-size: 1.75rem;
+    color: #0d6efd; /* Biru */
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.item-details h5 {
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #000;
+}
+
+.item-details span {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* --- Detail Pembayaran (Nickname, ID, Harga) --- */
+.payment-details .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0; /* Menghapus padding horizontal */
+    border-bottom: 1px solid #F0F0F0 !important;
+}
+
+.payment-details .list-group-item span {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.payment-details .list-group-item strong {
+    color: #000;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* --- Kotak Rewards (Hijau) --- */
+.rewards-box {
+    background-color: #E6F7F0; /* Hijau sangat muda */
+    border: 1px solid #B3E0C8; /* Border hijau muda */
+    color: #005A34; /* Teks hijau tua */
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 1.5rem;
+}
+
+.rewards-box i {
+    margin-right: 0.5rem;
+    font-weight: 600;
+}
+
+/* --- Total Pembayaran --- */
+.total-payment {
+    text-align: right;
+    margin-top: 1.5rem;
+}
+
+.total-payment span {
+    display: block;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.25rem;
+}
+
+.total-payment h2 {
+    margin-bottom: 0;
+    font-weight: 700;
+    color: #000;
+    font-size: 2rem; /* Dibuat besar dan jelas */
+}
