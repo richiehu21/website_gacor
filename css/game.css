@@ -116,19 +116,30 @@ main {
     background-attachment: fixed; 
 }
 
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(30px);
+    }
+    100% {
+        transform: translateY(0);
+}
+}
+
 .content {
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     background-color: whitesmoke;
-    top: 40vh;
+    /* top: 40vh; */
+    margin-top: -10vh;
     border-radius: 50px 50px 0 0;
     padding: 1rem;
     color: whitesmoke;
-    box-shadow: 0 -3px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -30px 100px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 0.8s ease 0.1s both;
 }
 
 /* ===== INPUT ID ====== */
@@ -184,7 +195,6 @@ main {
 .content .id-section .input-group {
     display: flex;
     flex-direction: column;
-    /* width: 50%; */
     padding-right: .3rem;
 }
 
@@ -240,7 +250,6 @@ a {
 .card {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     padding: 0;
     padding-top: 8% ;
@@ -316,3 +325,66 @@ a {
     margin-bottom: .5rem;
 }
 /* ==== PILIH PEMBAYARAN END ===== */
+
+
+/* ------------- bagian footer ------------- */
+.footer {
+  background-color: rgb(234, 228, 228);
+  padding: 40px 40px 0px 40px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.container_1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer_container {
+  flex: 1;
+  min-width: 220px;
+}
+
+.container_title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.container_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container_list li a,
+.contailer_list li a {
+  text-decoration: none;
+  color: black;
+}
+
+.container_list li a:hover,
+.contailer_list li a:hover {
+  text-decoration: underline;
+}
+
+.footer_img {
+  width: 28px;
+  margin-right: 10px;
+  transition: transform 0.2s;
+}
+
+.footer_img:hover {
+  transform: scale(1.1);
+}
+
+/* Copyright di bawah */
+.footer_copyright {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #bfbfbf;
+}

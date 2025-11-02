@@ -66,6 +66,7 @@ body {
 section {
     margin-inline: 15%;
     margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .table-container {
@@ -91,3 +92,66 @@ th,td {
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 1rem;
 }
+
+/* ------------- bagian footer ------------- */
+.footer {
+  background-color: rgb(234, 228, 228);
+  padding: 40px 40px 0px 40px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.container_1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer_container {
+  flex: 1;
+  min-width: 220px;
+}
+
+.container_title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.container_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container_list li a,
+.contailer_list li a {
+  text-decoration: none;
+  color: black;
+}
+
+.container_list li a:hover,
+.contailer_list li a:hover {
+  text-decoration: underline;
+}
+
+.footer_img {
+  width: 28px;
+  margin-right: 10px;
+  transition: transform 0.2s;
+}
+
+.footer_img:hover {
+  transform: scale(1.1);
+}
+
+/* Copyright di bawah */
+.footer_copyright {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #bfbfbf;
+}
+
