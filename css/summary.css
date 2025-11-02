@@ -1,0 +1,184 @@
+/* ================================== */
+/* CSS TEMA UTAMA (rast7-theme.css) */
+/* ================================== */
+body {
+    background-color: #FAFAFA; /* Latar belakang abu-abu sangat muda */
+    color: #333333; /* Teks gelap */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background:
+    linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
+    url("../asset/bgwallpaper.png") repeat center center;
+}
+
+header img {
+    filter: drop-shadow(0 0 1px black);
+    margin-right: 20px; 
+}
+
+/* ------------- bagian navbar ------------- */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0,0.1);
+    padding-inline: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.profile_icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0px 5px 0px 5px;
+}
+
+.nav-item { /* ini buat menghilangkan dot dibagian kiri button */
+    list-style: none;;
+}
+
+/* ------------- penutup bagian navbar ------------- */
+
+
+/* --- Tombol Utama (Bisa dipakai di semua halaman) --- */
+.btn-redeem {
+    background-color: #333333; /* Tombol hitam/abu tua */
+    border: none;
+    border-radius: 8px;
+    padding: 0.9rem 1rem;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #FFFFFF; /* Teks tombol putih */
+}
+.btn-redeem:hover {
+    background-color: #000000; /* Tombol jadi hitam pekat */
+}
+
+/* --- Bagian Footer Bawah (Global) --- */
+.sub-footer {
+    background-color: #FFFFFF; /* Footer putih */
+    color: #555555;
+    padding: 1.5rem 0;
+    font-size: 0.8rem;
+    border-top: 1px solid #E0E0E0; /* Garis batas */
+}
+.sub-footer-links a {
+    color: #555555;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+.sub-footer-links a:hover {
+    text-decoration: underline;
+}
+.footer-logo {
+    font-weight: 800;
+    font-size: 1rem;
+    color: #333;
+}
+
+/*
+ * CSS Khusus untuk Halaman Sukses Pembayaran
+ * (payment-success.css)
+ */
+
+/* Header Hijau di Atas */
+.success-header {
+    margin-top: 1rem;
+    background-color: #F0F8F0; /* Hijau sangat pucat */
+    padding: 3rem 0;
+    text-align: center;
+    border-bottom: 1px solid #E0E0E0;
+    border-radius: 2rem;
+}
+
+.success-icon {
+    font-size: 4.5rem;
+    color: #28a745; /* Hijau sukses Bootstrap */
+    line-height: 1;
+}
+
+.success-header h1 {
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 0.25rem;
+}
+
+.success-header .lead {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+/* Bagian Konten Rincian di Bawah */
+.receipt-section {
+    padding: 40px 0 60px 0;
+}
+
+/* Kartu Rincian */
+.receipt-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.receipt-card-header {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid #E0E0E0;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.receipt-card-body {
+    padding: 1.5rem;
+}
+
+/* Judul sub-kategori (DETAIL PEMBELIAN) */
+.receipt-subtitle {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #777;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Detail Rincian (List) --- */
+/* Style ini mirip dengan .payment-details sebelumnya */
+/* agar konsisten */
+.receipt-details .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.85rem 0; /* Menghapus padding horizontal */
+    border-bottom: 1px solid #F0F0F0 !important;
+}
+
+.receipt-details .list-group-item:last-child {
+    border-bottom: none !important;
+}
+
+.receipt-details .list-group-item span {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.receipt-details .list-group-item strong {
+    color: #000;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-align: right;
+}
+
+/* Baris Total dibuat lebih menonjol */
+.receipt-details .list-group-item.payment-total span {
+    font-weight: 700;
+    color: #000;
+}
+
+.receipt-details .list-group-item.payment-total strong {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #000;
+}
+
+/* Tombol .btn-redeem sudah di-style di TEMA UTAMA */
