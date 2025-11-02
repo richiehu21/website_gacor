@@ -4,75 +4,92 @@
     box-sizing: border-box;
 }
 
-:root {
-    --font-clr :blue;
-}
-
-body{
+body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     scroll-behavior: smooth;
+}
+
+
+.bgn-ats {
+    height: 60vh;
+    margin-inline: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bgn-ats h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.bgn-ats p {
+    font-size: 1.2rem;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+}
 
 }
 
 section {
-    margin-inline: 15%;
+    box-shadow: 0 -5px 10px rgba(0,0,0,.1);
+    padding-block: 2rem;
+    background-color: aqua;
+    border-radius: 16px 16px 0 0;
+    animation: fadeInUp 0.8s ease 0.8s both;
 }
 
-table, th, td {
-  border: 1px solid rgba(0, 0, 0,.1); 
-  border-collapse: collapse; 
+.q-a-wrapper {
+    margin: 1rem;
+    background-color: blanchedalmond;
+    border-radius: 16px;
+
 }
-thead {
+
+.q-a-wrapper .quest{
+    padding: 1rem 2rem;
     font-weight: bold;
 }
-th, td {
-  padding: 8px; 
-  text-align: left;
-}
 
-.bagian-1 .img-container {
-    width: 100%;
-    height: fit-content;
-}
-
-.bagian-1 .img-container > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.bagian-1 .prd-promo {
-    background-color: rgba(0, 255, 255,.2);
-    color: var(--font-clr);
-    width: fit-content;
-    padding: .5rem 1rem;
-    border-radius: 16px;
-}
-
-.bagian-1 .info-promo {
+.q-a-wrapper .quest span {
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: .2rem;
 }
 
-.bagian-1 .info-promo > svg {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
+.q-a-wrapper .quest p{
+    margin: 0;
+    display: flex;
+    align-items: center;
 }
 
-.bagian-2 h2 {
-    margin-top: 5rem;
+
+.q-a-wrapper .answer {
+    padding-left: 1rem;
 }
 
-.bagian-2 .table-container {
-    overflow-x: auto;
+.q-a-wrapper .card {
+    background: none;
+    border: none;
 }
 
-.bagian-2 .promo-terms {
-    margin-top: 3rem;
-}
-
-.bagian-2 .promo-terms li {
-    margin-bottom: 10px;
+.q-a-wrapper a{
+    color: black;
+    text-decoration: none;
 }
 
 
@@ -137,4 +154,3 @@ th, td {
   padding-top: 15px;
   border-top: 1px solid #bfbfbf;
 }
-

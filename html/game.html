@@ -14,49 +14,101 @@
   </head>
   <body>
     <header>
-    <!-- ini bagian nav -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <img src="../asset/logo.png" alt="icon_game" width="120px">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent"> <!-- ini bagian ketika minimize nanti masuk kedalam hamburger -->
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="promo.html">Promo</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="login.html">Login</a>
-            </li>
-          </ul>
-          <form class="d-flex" role="search"> <!-- ini bagian search -->
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-            <button class="btn btn-outline-dark" style="margin-right: 10px;" type="submit">Search</button>
-          </form>
-          <ul class="navbar-nav">  <!-- ini bagian profile, ul biar dia ga lengket dengan searchbar -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="../asset/profile.png" alt="profile.png" class="profile_icon">GUEST
-              </a>
-              <ul class="dropdown-menu"> <!-- ini bagian isi profile -->
-                <li><a class="dropdown-item" href="profile.html">View Profile</a></li>
-                <li><a class="dropdown-item" href="orders.html">Orders</a></li>
-                <li><a class="dropdown-item" href="settings.html">Settings</a></li>
-              </ul>
-          </li>
-          </ul>
+      <!-- ini bagian nav -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <img src="../asset/logo.png" alt="icon_game" width="120px" />
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- ini bagian ketika minimize nanti masuk kedalam hamburger -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="promo.html"
+                  >Promo</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="contact.html"
+                  >Contact</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="login.html"
+                  >Login</a
+                >
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <!-- ini bagian search -->
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button
+                class="btn btn-outline-dark"
+                style="margin-right: 10px"
+                type="submit"
+              >
+                Search
+              </button>
+            </form>
+            <ul class="navbar-nav">
+              <!-- ini bagian profile, ul biar dia ga lengket dengan searchbar -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="../asset/profile.png"
+                    alt="profile.png"
+                    class="profile_icon"
+                  />GUEST
+                </a>
+                <ul class="dropdown-menu">
+                  <!-- ini bagian isi profile -->
+                  <li>
+                    <a class="dropdown-item" href="profile.html"
+                      >View Profile</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="orders.html">Orders</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="settings.html">Settings</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
-  </header>
-  
+      </nav>
+    </header>
+
     <div class="bg-game"></div>
     <div class="content">
       <!-- ======= INPUT ID ======== -->
@@ -67,8 +119,7 @@
             <p>USER ID</p>
             <div class="input-wrapper">
               <span class="icon">👤</span>
-              <input type="text" placeholder="Masukkan User ID" maxlength="4" />
-              <span class="limit">4 DIGIT</span>
+              <input type="text" placeholder="Masukkan User ID" />
             </div>
           </div>
 
@@ -91,7 +142,6 @@
         <div
           class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xl-6 list-diamond"
         >
-        
           <div class="col p-2">
             <a href="#">
               <div class="card">
@@ -262,8 +312,6 @@
               </div>
             </a>
           </div>
-
-          
         </div>
       </div>
 
@@ -274,88 +322,153 @@
         >
           <div class="col p-2">
             <a href="#">
-            <div class="card">
-              <div class="pay-img">
-                <img src="../asset/logo_payment/gopay.png" alt="">
+              <div class="card">
+                <div class="pay-img">
+                  <img src="../asset/logo_payment/gopay.png" alt="" />
+                </div>
+                <p>Gopay</p>
               </div>
-              <p>Gopay</p>
-            </div>
             </a>
           </div>
           <div class="col p-2">
             <a href="#">
-            <div class="card">
-              <div class="pay-img">
-                <img src="../asset/logo_payment/dana.png" alt="">
+              <div class="card">
+                <div class="pay-img">
+                  <img src="../asset/logo_payment/dana.png" alt="" />
+                </div>
+                <p>Dana</p>
               </div>
-              <p>Dana</p>
-            </div>
             </a>
           </div>
           <div class="col p-2">
             <a href="#">
-            <div class="card">
-              <div class="pay-img">
-                <img src="../asset/logo_payment/indomaret.png" alt="">
+              <div class="card">
+                <div class="pay-img">
+                  <img src="../asset/logo_payment/indomaret.png" alt="" />
+                </div>
+                <p>Indomaret</p>
               </div>
-              <p>Indomaret</p>
-            </div>
             </a>
           </div>
           <div class="col p-2">
             <a href="#">
-            <div class="card">
-              <div class="pay-img">
-                <img src="../asset/logo_payment/indosat.png" alt="">
+              <div class="card">
+                <div class="pay-img">
+                  <img src="../asset/logo_payment/indosat.png" alt="" />
+                </div>
+                <p>Indosat</p>
               </div>
-              <p>Indosat</p>
-            </div>
             </a>
           </div>
           <div class="col p-2">
             <a href="#">
-            <div class="card">
-              <div class="pay-img">
-                <img src="../asset/logo_payment/ovo.png" alt="">
+              <div class="card">
+                <div class="pay-img">
+                  <img src="../asset/logo_payment/ovo.png" alt="" />
+                </div>
+                <p>OVO</p>
               </div>
-              <p>OVO</p>
-            </div>
             </a>
           </div>
           <div class="col p-2">
             <a href="#">
-            <div class="card">
-              <div class="pay-img">
-                <img src="../asset/logo_payment/qris.png" alt="">
+              <div class="card">
+                <div class="pay-img">
+                  <img src="../asset/logo_payment/qris.png" alt="" />
+                </div>
+                <p>QRIS</p>
               </div>
-              <p>QRIS</p>
-            </div>
             </a>
           </div>
           <div class="col p-2">
             <a href="#">
-            <div class="card">
-              <div class="pay-img">
-                <img src="../asset/logo_payment/telkomsel.png" alt="">
+              <div class="card">
+                <div class="pay-img">
+                  <img src="../asset/logo_payment/telkomsel.png" alt="" />
+                </div>
+                <p>Telkomsel</p>
               </div>
-              <p>Telkomsel</p>
-            </div>
             </a>
           </div>
           <div class="col p-2">
             <a href="#">
-            <div class="card">
-              <div class="pay-img">
-                <img src="../asset/logo_payment/gopay.png" alt="">
+              <div class="card">
+                <div class="pay-img">
+                  <img src="../asset/logo_payment/gopay.png" alt="" />
+                </div>
+                <p>Gopay</p>
               </div>
-              <p>Gopay</p>
-            </div>
             </a>
           </div>
         </div>
       </div>
     </div>
     <!-- INPUT NOMINAL END -->
+
+    <!-- FOOTER START -->
+    <footer class="footer">
+      <div class="container_1">
+        <div class="footer_container">
+          <div class="container_title">Untuk Penerbit</div>
+          <ul class="container_list">
+            <li><a href="#">Daftarkan Judul Anda di RAST-7</a></li>
+            <li>
+              <a href="pelajari_lebih.html"
+                >Pelajari lebih lanjut tentang kami</a
+              >
+            </li>
+            <li><a href="about.html">About us</a></li>
+          </ul>
+        </div>
+        <div class="footer_container">
+          <div class="container_title">Butuh Bantuan?</div>
+          <div class="container_list">
+            <button type="button" class="btn btn-secondary">
+              Hubungi Kami ☎️
+            </button>
+          </div>
+        </div>
+        <div class="footer_container">
+          <div class="container_title">Area</div>
+          <div class="container_list">
+            <button type="button" class="btn btn-secondary">
+              🇮🇩 Indonesia 🌐
+            </button>
+          </div>
+        </div>
+        <div class="footer_container">
+          <div class="container_title">Dapatkan Berita Coda di:</div>
+          <div class="container_list">
+            <a href="#"
+              ><img
+                src="../asset/logo_sosmed/facebook.png"
+                alt="facebook.img"
+                class="footer_img"
+            /></a>
+            <a href="#"
+              ><img
+                src="../asset/logo_sosmed/instagram.png"
+                alt="instagram.img"
+                class="footer_img"
+            /></a>
+            <a href="#"
+              ><img
+                src="../asset/logo_sosmed/youtube.png"
+                alt="youtube.img"
+                class="footer_img"
+            /></a>
+            <a href="#"
+              ><img
+                src="../asset/logo_sosmed/tiktok.png"
+                alt="tiktok.img"
+                class="footer_img"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer_copyright">&copy; RAST-7 Store 2025</div>
+    </footer>
+    <!-- FOOTER END -->
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
