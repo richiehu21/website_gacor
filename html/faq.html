@@ -13,6 +13,51 @@
     <link rel="stylesheet" href="../css/faq.css" />
   </head>
   <body>
+    <header>
+    <!-- ini bagian nav -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <img src="../asset/logo.png" alt="icon_game" width="120px">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent"> <!-- ini bagian ketika minimize nanti masuk kedalam hamburger -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="promo.html">Promo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="login.html">Login</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search"> <!-- ini bagian search -->
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+            <button class="btn btn-outline-dark" style="margin-right: 10px;" type="submit">Search</button>
+          </form>
+          <ul class="navbar-nav">  <!-- ini bagian profile, ul biar dia ga lengket dengan searchbar -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="../asset/profile.png" alt="profile.png" class="profile_icon">GUEST
+              </a>
+              <ul class="dropdown-menu"> <!-- ini bagian isi profile -->
+                <li><a class="dropdown-item" href="profile.html">View Profile</a></li>
+                <li><a class="dropdown-item" href="orders.html">Orders</a></li>
+                <li><a class="dropdown-item" href="settings.html">Settings</a></li>
+              </ul>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
     <div class="bgn-ats">
       <h1>Bagaimana Kami Bisa Membantu ?</h1>
       <p>

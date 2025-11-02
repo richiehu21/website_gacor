@@ -11,8 +11,32 @@ body {
     color: whitesmoke;
     background: linear-gradient(180deg, #232526, #414345);
     text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    overflow-x: hidden;
 
 }
+
+/* ------------- bagian navbar ------------- */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0,0.1);
+    padding-inline: 1rem;
+}
+
+.profile_icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0px 5px 0px 5px;
+}
+
+.nav-item { /* ini buat menghilangkan dot dibagian kiri button */
+    list-style: none;;
+}
+
+/* ------------- penutup bagian navbar ------------- */
 
 .lacak {
     width: 100%;
