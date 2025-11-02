@@ -14,7 +14,7 @@ body{
 }
 
 section {
-    margin-inline: 10%;
+    margin-inline: 15%;
 }
 
 table, th, td {
@@ -63,7 +63,7 @@ th, td {
 }
 
 .bagian-2 .table-container {
-    overflow-y: auto;
+    overflow-x: auto;
 }
 
 .bagian-2 .promo-terms {
