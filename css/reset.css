@@ -59,9 +59,9 @@ main {
 /* ===== SEMUA KODE CSS LOGIN BARU DIMULAI DARI SINI ===== */
 /* ================================================== */
 
-.login-container {
+.reset-container {
     z-index: 1;
-    width: 600px;
+    width: 575px;
     margin: 80px auto;
     padding: 30px;
     background-color: rgba(164, 183, 175, 0.907);
@@ -69,20 +69,20 @@ main {
     border-radius: 10px;
     position: relative;
 }
-.login-container h2 {
+.reset-container h2 {
     text-align: center;
     margin-bottom: 20px;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
 }
-.login-container label {
+.reset-container label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
 }
-.login-container input[type="text"],
-.login-container input[type="password"] {
+.reset-container input[type="text"],
+.reset-container input[type="password"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -91,7 +91,7 @@ main {
     font-family: 'Courier New', Courier, monospace;
     background-color: #f9f9f9;
 }
-.login-container button {
+.reset-container button {
     width: 100%;
     padding: 10px;
     background-color: #28a745;
@@ -102,21 +102,18 @@ main {
     cursor: pointer;
     font-family: 'Courier New', Courier, monospace;
 }
-.login-container button:hover {
+.reset-container button:hover {
     background-color: #218838;
 }
 
 .register-link {
     margin-top: 10px;
-    font-family: 'Courier New', Courier,
-    monospace;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-
-.reset-link {
+.login-link {
     margin-top: 10px;
-    font-family: 'Courier New', Courier, 
-    monospace;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 /* ===================PENUTUP LOGIN=============================== */
