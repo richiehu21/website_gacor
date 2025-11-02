@@ -63,7 +63,7 @@ th, td {
 }
 
 .bagian-2 .table-container {
-    overflow-y: auto;
+    overflow-x: auto;
 }
 
 .bagian-2 .promo-terms {
