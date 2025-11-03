@@ -6,8 +6,8 @@ body {
     color: #333333; /* Teks gelap */
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     background:
-    linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
-    url("../asset/bgwallpaper.png") repeat center center;
+            linear-gradient(rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.7)),
+            url("../asset/bgwallpaper.png") repeat center center;
 }
 
 header img {
@@ -20,9 +20,40 @@ header img {
 .navbar {
     display: flex;
     justify-content: space-between;
-    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0,0.1);
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
     padding-inline: 1rem;
-    font-family: 'Courier New', Courier, monospace;
+    /* Gradien diubah menjadi warna solid yang konsisten dengan tema */
+    background-color: #2a2a3e; 
+}
+
+/* Mengatur warna teks di navbar (Bootstrap override) */
+.navbar .nav-link {
+    color: #f0f0f0 !important;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #ffffff !important; /* Warna aksen saat di-hover atau aktif */
+}
+
+/* Mengatur warna teks "GUEST" (Bootstrap override) */
+.navbar .dropdown-toggle {
+    color: #f0f0f0 !important;
+}
+.navbar .dropdown-toggle:hover {
+    color: #00aaff !important;
+}
+
+/* Mengatur dropdown menu agar gelap */
+.dropdown-menu {
+    background-color: #2a2a3e;
+    border: 1px solid #444;
+}
+.dropdown-item {
+    color: #f0f0f0;
+}
+.dropdown-item:hover {
+    background-color: #00aaff;
+    color: #1a1a2e; /* Teks jadi gelap saat background hover terang */
 }
 
 .profile_icon {
@@ -37,44 +68,94 @@ header img {
     list-style: none;;
 }
 
+.navbar-toggler { /* ini buat mengganti warna background hamburger */
+  background-color: rgb(79, 79, 114);
+}
+
 /* ------------- penutup bagian navbar ------------- */
 
 
 /* --- Tombol Utama (Bisa dipakai di semua halaman) --- */
 .btn-redeem {
-    background-color: #333333; /* Tombol hitam/abu tua */
+    background-color: #FFFFFF;
     border: none;
     border-radius: 8px;
     padding: 0.9rem 1rem;
     font-weight: 700;
     font-size: 1rem;
-    color: #FFFFFF; /* Teks tombol putih */
+    color: #2a2a3e; 
 }
 .btn-redeem:hover {
-    background-color: #000000; /* Tombol jadi hitam pekat */
+    background-color: #E9ECEF; 
+    color: #2a2a3e;
 }
 
-/* --- Bagian Footer Bawah (Global) --- */
-.sub-footer {
-    background-color: #FFFFFF; /* Footer putih */
-    color: #555555;
-    padding: 1.5rem 0;
-    font-size: 0.8rem;
-    border-top: 1px solid #E0E0E0; /* Garis batas */
+/* ------------- bagian footer ------------- */
+.footer {
+  background-color: #2a2a3e; 
+  padding: 40px 40px 0px 40px;
+  font-family: 'Courier New', Courier, monospace;
 }
-.sub-footer-links a {
-    color: #555555;
-    text-decoration: none;
-    margin-left: 1rem;
+
+.container_1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
 }
-.sub-footer-links a:hover {
-    text-decoration: underline;
+
+.footer_container {
+  flex: 1;
+  min-width: 220px;
 }
-.footer-logo {
-    font-weight: 800;
-    font-size: 1rem;
-    color: #333;
+
+.container_title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ffffff; /* Judul footer jadi putih */
 }
+
+.container_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Perbaikan untuk typo 'contailer_list' dan pewarnaan link footer */
+.container_list li a {
+  text-decoration: none;
+  color: #f0f0f0; /* Tautan footer jadi terang */
+  font-family: 'Courier New', Courier, monospace !important; /* Pastikan font tetap */
+}
+
+.container_list li a:hover {
+  text-decoration: underline;
+  color: #00aaff; /* Aksen biru saat di-hover */
+}
+
+.footer_img {
+  width: 28px;
+  margin-right: 10px;
+  transition: transform 0.2s;
+}
+
+.footer_img:hover {
+  transform: scale(1.1);
+}
+
+/* Copyright di bawah */
+.footer_copyright {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #444; /* Warna border yang lebih soft */
+  color: #aaaaaa; /* Warna teks copyright lebih redup */
+}
+
+/* Penutup Footer */
 
 /*
  * CSS Khusus untuk Halaman Sukses Pembayaran
@@ -82,6 +163,7 @@ header img {
  */
 
 /* Header Hijau di Atas */
+/* (Tidak diubah, asumsi header sukses tetap terang) */
 .success-header {
     margin-top: 1rem;
     background-color: #F0F8F0; /* Hijau sangat pucat */
@@ -116,17 +198,19 @@ header img {
 
 /* Kartu Rincian */
 .receipt-card {
-    background-color: #FFFFFF;
-    border: 1px solid #E0E0E0;
+    background-color: #2a2a3e; 
+    border: 1px solid #40405a; 
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: none; 
+    color: #E0E0E0; 
 }
 
 .receipt-card-header {
     padding: 1.25rem 1.5rem;
-    border-bottom: 1px solid #E0E0E0;
+    border-bottom: 1px solid #40405a; 
     font-weight: 700;
     font-size: 1.2rem;
+    color: #FFFFFF;
 }
 
 .receipt-card-body {
@@ -137,20 +221,19 @@ header img {
 .receipt-subtitle {
     font-size: 0.8rem;
     font-weight: 700;
-    color: #777;
+    color: #ADB5BD; 
     letter-spacing: 0.5px;
     margin-bottom: 0.5rem;
 }
 
 /* --- Detail Rincian (List) --- */
-/* Style ini mirip dengan .payment-details sebelumnya */
-/* agar konsisten */
 .receipt-details .list-group-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.85rem 0; /* Menghapus padding horizontal */
-    border-bottom: 1px solid #F0F0F0 !important;
+    border-bottom: 1px solid #40405a !important; 
+    background-color: transparent; 
 }
 
 .receipt-details .list-group-item:last-child {
@@ -158,12 +241,12 @@ header img {
 }
 
 .receipt-details .list-group-item span {
-    color: #555;
+    color: #ADB5BD; 
     font-size: 0.95rem;
 }
 
 .receipt-details .list-group-item strong {
-    color: #000;
+    color: #E0E0E0; 
     font-weight: 600;
     font-size: 0.95rem;
     text-align: right;
@@ -172,13 +255,13 @@ header img {
 /* Baris Total dibuat lebih menonjol */
 .receipt-details .list-group-item.payment-total span {
     font-weight: 700;
-    color: #000;
+    color: #FFFFFF; 
 }
 
 .receipt-details .list-group-item.payment-total strong {
     font-size: 1.2rem;
     font-weight: 700;
-    color: #000;
+    color: #FFFFFF; 
 }
 
-/* Tombol .btn-redeem sudah di-style di TEMA UTAMA */
+/* Tombol .btn-redeem sudah di-style di TEMA UTAMA (di atas) */

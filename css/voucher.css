@@ -4,8 +4,8 @@ body {
     color: #333333; /* Teks gelap */
     font-family: 'Inter', sans-serif;
     background:
-    linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
-    url("../asset/bgwallpaper.png") repeat center center;
+            linear-gradient(rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.7)),
+            url("../asset/bgwallpaper.png") repeat center center;
 }
 
 header img {
@@ -22,8 +22,40 @@ header {
 .navbar {
     display: flex;
     justify-content: space-between;
-    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0,0.1);
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
     padding-inline: 1rem;
+    /* Gradien diubah menjadi warna solid yang konsisten dengan tema */
+    background-color: #2a2a3e; 
+}
+
+/* Mengatur warna teks di navbar (Bootstrap override) */
+.navbar .nav-link {
+    color: #f0f0f0 !important;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #ffffff !important; /* Warna aksen saat di-hover atau aktif */
+}
+
+/* Mengatur warna teks "GUEST" (Bootstrap override) */
+.navbar .dropdown-toggle {
+    color: #f0f0f0 !important;
+}
+.navbar .dropdown-toggle:hover {
+    color: #00aaff !important;
+}
+
+/* Mengatur dropdown menu agar gelap */
+.dropdown-menu {
+    background-color: #2a2a3e;
+    border: 1px solid #444;
+}
+.dropdown-item {
+    color: #f0f0f0;
+}
+.dropdown-item:hover {
+    background-color: #00aaff;
+    color: #1a1a2e; /* Teks jadi gelap saat background hover terang */
 }
 
 .profile_icon {
@@ -38,6 +70,10 @@ header {
     list-style: none;;
 }
 
+.navbar-toggler { /* ini buat mengganti warna background hamburger */
+  background-color: rgb(79, 79, 114);
+}
+
 /* ------------- penutup bagian navbar ------------- */
 
 /* --- Bagian Konten Redeem --- */
@@ -47,40 +83,42 @@ header {
 }
 
 .redeem-box {
-    background-color: #FFFFFF; /* Kotak putih */
+    background-color: #2a2a3e; 
     padding: 2.5rem;
-    border-radius: 12px; /* Border radius lebih halus */
+    border-radius: 12px;
     max-width: 450px;
     margin: 0 auto;
-    border: 1px solid #E0E0E0; /* Border abu-abu tipis */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Shadow halus */
+    border: 1px solid #40405a; 
+    box-shadow: none; 
+    color: #E0E0E0;
 }
 
 .redeem-icon {
     font-size: 3rem;
-    color: #444444; /* Ikon warna abu-abu gelap */
+    color: #ADB5BD;
 }
 
 .redeem-box .form-control {
-    background-color: #FFFFFF;
-    border: 1px solid #CED4DA; /* Border input standar */
+    background-color: #40405a; 
+    border: 1px solid #5a5a7a; 
+    color: #FFFFFF;
     border-radius: 8px;
     padding: 0.9rem 1rem;
-    text-align: center; /* Teks input rata kiri */
+    text-align: center; 
     font-weight: 500;
 }
 
 .redeem-box .form-control::placeholder {
-    color: #999999;
+    color: #ADB5BD; 
     font-weight: 500;
 }
 
 .privacy-text {
-    color: #777777; /* Teks abu-abu */
+    color: #ADB5BD;
     font-size: 0.8rem;
 }
 .privacy-text a {
-    color: #000000; /* Link hitam */
+    color: #FFFFFF; 
     text-decoration: none;
     font-weight: 600;
 }
@@ -88,79 +126,85 @@ header {
     text-decoration: underline;
 }
 
+
 .btn-redeem {
-    background-color: #333333; /* Tombol hitam/abu tua */
+    background-color: #FFFFFF; 
     border: none;
     border-radius: 8px;
     padding: 0.9rem 1rem;
     font-weight: 700;
     font-size: 1rem;
-    color: #FFFFFF; /* Teks tombol putih */
+    color: #2a2a3e; 
 }
 .btn-redeem:hover {
-    background-color: #000000; /* Tombol jadi hitam pekat */
+    background-color: #E9ECEF; 
+    color: #2a2a3e; 
 }
 
-/* --- Bagian Bantuan (Mengganti Hijau) --- */
-.help-section {
-    background-color: #F1F1F1; /* Latar belakang abu-abu muda */
-    color: #333333; /* Teks gelap */
-    padding: 2.5rem 0;
-    font-family: 'Courier New', Courier, monospace;
-    margin-bottom: 3rem;
+
+/* ------------- bagian footer ------------- */
+.footer {
+  background-color: #2a2a3e; 
+  padding: 40px 40px 0px 40px;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-.help-section h3 {
-    font-weight: 700;
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
+.container_1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
-.btn-contact {
-    background-color: #FFFFFF; /* Tombol putih */
-    color: #333333; /* Teks gelap */
-    border: 1px solid #CCCCCC; /* Border abu-abu */
-    border-radius: 50rem; /* "Pill" */
-    font-weight: 700;
-    padding: 0.5rem 1.25rem;
-}
-.btn-contact i {
-    margin-right: 0.25rem;
-}
-.btn-contact:hover {
-    background-color: #E9E9E9; /* Hover abu-abu muda */
-    color: #000;
-    border-color: #BDBDBD;
+.footer_container {
+  flex: 1;
+  min-width: 220px;
 }
 
-.social-icons a {
-    color: #333333; /* Ikon gelap */
-    font-size: 1.75rem;
-    margin-left: 0.75rem;
-    text-decoration: none;
-}
-.social-icons a:hover {
-    color: #000000;
+.container_title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ffffff; /* Judul footer jadi putih */
 }
 
-/* --- Bagian Footer Bawah --- */
-.sub-footer {
-    background-color: #FFFFFF; /* Footer putih */
-    color: #555555;
-    padding: 1.5rem 0;
-    font-size: 0.8rem;
-    border-top: 1px solid #E0E0E0; /* Garis batas */
+.container_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-.sub-footer-links a {
-    color: #555555;
-    text-decoration: none;
-    margin-left: 1rem;
+
+/* Perbaikan untuk typo 'contailer_list' dan pewarnaan link footer */
+.container_list li a {
+  text-decoration: none;
+  color: #f0f0f0; /* Tautan footer jadi terang */
+  font-family: 'Courier New', Courier, monospace !important; /* Pastikan font tetap */
 }
-.sub-footer-links a:hover {
-    text-decoration: underline;
+
+.container_list li a:hover {
+  text-decoration: underline;
+  color: #00aaff; /* Aksen biru saat di-hover */
 }
-.footer-logo {
-    font-weight: 800;
-    font-size: 1rem;
-    color: #333;
+
+.footer_img {
+  width: 28px;
+  margin-right: 10px;
+  transition: transform 0.2s;
 }
+
+.footer_img:hover {
+  transform: scale(1.1);
+}
+
+/* Copyright di bawah */
+.footer_copyright {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #444; /* Warna border yang lebih soft */
+  color: #aaaaaa; /* Warna teks copyright lebih redup */
+}
+
+/* Penutup Footer */
