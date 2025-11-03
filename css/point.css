@@ -6,9 +6,10 @@ body {
     color: #333333; /* Teks gelap */
     font-family: "Segoe UI", Helvetica, Arial, sans-serif;
     background:
-    linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
-    url("../asset/bgwallpaper.png") repeat center center;
+            linear-gradient(rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.7)),
+            url("../asset/bgwallpaper.png") repeat center center;
 }
+
 
 header img {
     filter: drop-shadow(0 0 1px black);
@@ -20,9 +21,40 @@ header img {
 .navbar {
     display: flex;
     justify-content: space-between;
-    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0,0.1);
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
     padding-inline: 1rem;
-    font-family: 'Courier New', Courier, monospace;
+    /* Gradien diubah menjadi warna solid yang konsisten dengan tema */
+    background-color: #2a2a3e; 
+}
+
+/* Mengatur warna teks di navbar (Bootstrap override) */
+.navbar .nav-link {
+    color: #f0f0f0 !important;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #ffffff !important; /* Warna aksen saat di-hover atau aktif */
+}
+
+/* Mengatur warna teks "GUEST" (Bootstrap override) */
+.navbar .dropdown-toggle {
+    color: #f0f0f0 !important;
+}
+.navbar .dropdown-toggle:hover {
+    color: #00aaff !important;
+}
+
+/* Mengatur dropdown menu agar gelap */
+.dropdown-menu {
+    background-color: #2a2a3e;
+    border: 1px solid #444;
+}
+.dropdown-item {
+    color: #f0f0f0;
+}
+.dropdown-item:hover {
+    background-color: #00aaff;
+    color: #1a1a2e; /* Teks jadi gelap saat background hover terang */
 }
 
 .profile_icon {
@@ -35,6 +67,10 @@ header img {
 
 .nav-item { /* ini buat menghilangkan dot dibagian kiri button */
     list-style: none;;
+}
+
+.navbar-toggler { /* ini buat mengganti warna background hamburger */
+  background-color: rgb(79, 79, 114);
 }
 
 /* ------------- penutup bagian navbar ------------- */
@@ -100,68 +136,74 @@ header img {
     background-color: #000000; /* Tombol jadi hitam pekat */
 }
 
-/* --- Bagian Bantuan (Dari Halaman Sebelumnya) --- */
-.help-section {
-    background-color: #F1F1F1; /* Latar belakang abu-abu muda */
-    color: #333333; /* Teks gelap */
-    padding: 2.5rem 0;
+
+
+/* ------------- bagian footer ------------- */
+.footer {
+  background-color: #2a2a3e; 
+  padding: 40px 40px 0px 40px;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-.help-section h3 {
-    font-weight: 700;
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
+.container_1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
-.btn-contact {
-    background-color: #FFFFFF; /* Tombol putih */
-    color: #333333; /* Teks gelap */
-    border: 1px solid #CCCCCC; /* Border abu-abu */
-    border-radius: 50rem; /* "Pill" */
-    font-weight: 700;
-    padding: 0.5rem 1.25rem;
-}
-.btn-contact i {
-    margin-right: 0.25rem;
-}
-.btn-contact:hover {
-    background-color: #E9E9E9; /* Hover abu-abu muda */
-    color: #000;
-    border-color: #BDBDBD;
+.footer_container {
+  flex: 1;
+  min-width: 220px;
 }
 
-.social-icons a {
-    color: #333333; /* Ikon gelap */
-    font-size: 1.75rem;
-    margin-left: 0.75rem;
-    text-decoration: none;
-}
-.social-icons a:hover {
-    color: #000000;
+.container_title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ffffff; /* Judul footer jadi putih */
 }
 
-/* --- Bagian Footer Bawah --- */
-.sub-footer {
-    background-color: #FFFFFF; /* Footer putih */
-    color: #555555;
-    padding: 1.5rem 0;
-    font-size: 0.8rem;
-    border-top: 1px solid #E0E0E0; /* Garis batas */
-}
-.sub-footer-links a {
-    color: #555555;
-    text-decoration: none;
-    margin-left: 1rem;
-}
-.sub-footer-links a:hover {
-    text-decoration: underline;
-}
-.footer-logo {
-    font-weight: 800;
-    font-size: 1rem;
-    color: #333;
+.container_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
+/* Perbaikan untuk typo 'contailer_list' dan pewarnaan link footer */
+.container_list li a {
+  text-decoration: none;
+  color: #f0f0f0; /* Tautan footer jadi terang */
+  font-family: 'Courier New', Courier, monospace !important; /* Pastikan font tetap */
+}
+
+.container_list li a:hover {
+  text-decoration: underline;
+  color: #00aaff; /* Aksen biru saat di-hover */
+}
+
+.footer_img {
+  width: 28px;
+  margin-right: 10px;
+  transition: transform 0.2s;
+}
+
+.footer_img:hover {
+  transform: scale(1.1);
+}
+
+/* Copyright di bawah */
+.footer_copyright {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #444; /* Warna border yang lebih soft */
+  color: #aaaaaa; /* Warna teks copyright lebih redup */
+}
+
+/* Penutup Footer */
 
 /* ======================================== */
 /* CSS HALAMAN POIN (points-page.css) */
@@ -175,37 +217,37 @@ header img {
 
 /* --- Kartu Poin (Kiri) --- */
 .points-card {
-    background-color: #FFFFFF;
-    border: 1px solid #E0E0E0;
+    background-color: #2a2a3e;
+    border: 1px solid #40405a;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: none;
     padding: 2.5rem;
     text-align: center;
 }
 
 .points-card h4 {
     font-weight: 700;
-    color: #333;
+    color: #FFFFFF;
     margin-bottom: 1.5rem;
 }
 
 /* Ikon permata (gem) */
 .points-card h4 i {
-    color: #0d6efd; /* Biru Bootstrap */
+    color: #0d6efd;
     margin-right: 0.5rem;
 }
 
 .points-display {
     font-size: 4.5rem; /* Ukuran poin dibuat besar */
     font-weight: 700;
-    color: #000000;
+    color: #FFFFFF;
     line-height: 1.1;
     margin-bottom: 0.5rem;
 }
 
 .points-card p {
     font-size: 1rem;
-    color: #555;
+    color: #ADB5BD;
     margin-bottom: 1.5rem;
 }
 
@@ -214,16 +256,16 @@ header img {
 
 /* --- Kartu Leaderboard (Kanan) --- */
 .leaderboard-card {
-    background-color: #FFFFFF;
-    border: 1px solid #E0E0E0;
+    background-color: #2a2a3e;
+    border: 1px solid #40405a;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: none; 
     padding: 2rem;
 }
 
 .leaderboard-card h4 {
     font-weight: 700;
-    color: #333;
+    color: #FFFFFF;
     margin-bottom: 1.5rem;
 }
 
@@ -233,8 +275,10 @@ header img {
 
 /* Mengatur item daftar di leaderboard */
 .leaderboard-card .list-group-item {
-    padding: 1rem 0; /* Menghapus padding kiri/kanan default */
-    border-bottom: 1px solid #F0F0F0 !important; /* Garis pemisah tipis */
+    padding: 1rem 0;
+    border-bottom: 1px solid #40405a !important;
+    background-color: transparent;
+    color: #ADB5BD;
 }
 
 .leaderboard-card .list-group-item:last-child {
@@ -243,7 +287,12 @@ header img {
 
 .leaderboard-card .list-group-item strong {
     font-weight: 600;
-    color: #000;
+    color: #E0E0E0; 
+}
+
+/* Menyesuaikan text-muted di dalam leaderboard */
+.leaderboard-card .text-muted {
+    color: #999 !important; 
 }
 
 /* Badge untuk ranking */
@@ -254,20 +303,20 @@ header img {
     line-height: 24px;
     text-align: center;
     border-radius: 50%;
-    background-color: #E9ECEF; /* Abu-abu netral */
-    color: #495057;
+    background-color: #495057; 
+    color: #E9ECEF;
     font-weight: 600;
     font-size: 0.8rem;
     margin-right: 0.75rem;
     vertical-align: middle;
 }
 
-/* Warna khusus untuk Top 3 */
+/* Warna khusus untuk Top 3 (Tetap, sudah kontras) */
 .rank-badge.rank-1 { background-color: #FFD700; color: #333; } /* Gold */
 .rank-badge.rank-2 { background-color: #C0C0C0; color: #333; } /* Silver */
 .rank-badge.rank-3 { background-color: #CD7F32; color: #fff; } /* Bronze */
 
-/* Warna ikon trofi (menggunakan class Bootstrap & custom) */
+/* Warna ikon trofi (Tetap, sudah kontras) */
 .text-warning { color: #FFD700 !important; }
 .text-secondary { color: #C0C0C0 !important; }
 .text-bronze { color: #CD7F32 !important; } /* Custom class untuk perunggu */
