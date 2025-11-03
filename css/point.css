@@ -8,6 +8,7 @@ body {
     background:
             linear-gradient(rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.7)),
             url("../asset/bgwallpaper.png") repeat center center;
+    overflow-x: hidden;
 }
 
 
@@ -25,6 +26,7 @@ header img {
     padding-inline: 1rem;
     /* Gradien diubah menjadi warna solid yang konsisten dengan tema */
     background-color: #2a2a3e; 
+    font-family: 'Courier New', Courier, monospace !important;
 }
 
 /* Mengatur warna teks di navbar (Bootstrap override) */
