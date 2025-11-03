@@ -9,6 +9,7 @@ body {
     background:
             linear-gradient(rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.7)),
             url("../asset/bgwallpaper.png") repeat center center;
+    overflow-x: hidden;
 }
 
 /* Header */
