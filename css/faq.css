@@ -8,9 +8,15 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     scroll-behavior: smooth;
     overflow-x: hidden;
+    color: #f0f0f0;
+    background-color: rgb(26, 26, 46);
 }
 
 /* ------------- bagian navbar ------------- */
+li > a {
+    font-family: 'Courier New', Courier, monospace !important;
+}
+
 header img {
     filter: drop-shadow(0 0 1px black);
     margin-right: 20px; 
@@ -19,10 +25,40 @@ header img {
 .navbar {
     display: flex;
     justify-content: space-between;
-    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0,0.1);
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
     padding-inline: 1rem;
-    font-family: 'Courier New', Courier, monospace;
-    margin-bottom: 20px;
+    /* Gradien diubah menjadi warna solid yang konsisten dengan tema */
+    background-color: #2a2a3e; 
+}
+
+/* Mengatur warna teks di navbar (Bootstrap override) */
+.navbar .nav-link {
+    color: #f0f0f0 !important;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #ffffff !important; /* Warna aksen saat di-hover atau aktif */
+}
+
+/* Mengatur warna teks "GUEST" (Bootstrap override) */
+.navbar .dropdown-toggle {
+    color: #f0f0f0 !important;
+}
+.navbar .dropdown-toggle:hover {
+    color: #00aaff !important;
+}
+
+/* Mengatur dropdown menu agar gelap */
+.dropdown-menu {
+    background-color: #2a2a3e;
+    border: 1px solid #444;
+}
+.dropdown-item {
+    color: #f0f0f0;
+}
+.dropdown-item:hover {
+    background-color: #00aaff;
+    color: #1a1a2e; /* Teks jadi gelap saat background hover terang */
 }
 
 .profile_icon {
@@ -37,6 +73,10 @@ header img {
     list-style: none;;
 }
 
+.navbar-toggler { /* ini buat mengganti warna background hamburger */
+  background-color: rgb(79, 79, 114);
+}
+
 /* ------------- penutup bagian navbar ------------- */
 
 
@@ -47,12 +87,13 @@ header img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.bgn-ats h1 {
+    text-align: center;
+  }
+  
+  .bgn-ats h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-}
+  }
 
 .bgn-ats p {
     font-size: 1.2rem;
@@ -71,16 +112,16 @@ header img {
 }
 
 section {
-    box-shadow: 0 -5px 10px rgba(0,0,0,.1);
+    box-shadow:inset 0 0 30px 20px rgba(255, 255, 255, 0.1),0 0 100px 40px rgba(255, 255, 255, .1);
     padding-block: 2rem;
-    background-color: aqua;
+    background-color: rgb(26, 26, 46);
     border-radius: 16px 16px 0 0;
-    animation: fadeInUp 0.8s ease 0.8s both;
+    animation: fadeInOut 0.8s ease 0.1s both;
 }
 
 .q-a-wrapper {
     margin: 1rem;
-    background-color: blanchedalmond;
+    background-color: rgba(245, 245, 245,.1);
     border-radius: 16px;
 
 }
@@ -105,6 +146,7 @@ section {
     margin: 0;
     display: flex;
     align-items: center;
+    color: #f0f0f0;
 }
 
 
@@ -125,7 +167,8 @@ section {
 
 /* ------------- bagian footer ------------- */
 .footer {
-  background-color: rgb(234, 228, 228);
+  /* Warna footer disamakan dengan warna kartu/navbar */
+  background-color: #2a2a3e; 
   padding: 40px 40px 0px 40px;
   font-family: 'Courier New', Courier, monospace;
 }
@@ -147,6 +190,7 @@ section {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 15px;
+  color: #ffffff; /* Judul footer jadi putih */
 }
 
 .container_list {
@@ -155,15 +199,16 @@ section {
   margin: 0;
 }
 
-.container_list li a,
-.contailer_list li a {
+/* Perbaikan untuk typo 'contailer_list' dan pewarnaan link footer */
+.container_list li a {
   text-decoration: none;
-  color: black;
+  color: #f0f0f0; /* Tautan footer jadi terang */
+  font-family: 'Courier New', Courier, monospace !important; /* Pastikan font tetap */
 }
 
-.container_list li a:hover,
-.contailer_list li a:hover {
+.container_list li a:hover {
   text-decoration: underline;
+  color: #00aaff; /* Aksen biru saat di-hover */
 }
 
 .footer_img {
@@ -182,5 +227,6 @@ section {
   font-size: 14px;
   margin-top: 30px;
   padding-top: 15px;
-  border-top: 1px solid #bfbfbf;
+  border-top: 1px solid #444; /* Warna border yang lebih soft */
+  color: #aaaaaa; /* Warna teks copyright lebih redup */
 }

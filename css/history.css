@@ -9,13 +9,17 @@ body {
     scroll-behavior: smooth;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     color: whitesmoke;
-    background: linear-gradient(180deg, #232526, #414345);
     text-shadow: 0 2px 8px rgba(0,0,0,0.4);
     overflow-x: hidden;
+    background-color: rgb(26, 26, 46);
 
 }
 
 /* ------------- bagian navbar ------------- */
+li > a {
+    font-family: 'Courier New', Courier, monospace !important;
+}
+
 header img {
     filter: drop-shadow(0 0 1px black);
     margin-right: 20px; 
@@ -24,10 +28,40 @@ header img {
 .navbar {
     display: flex;
     justify-content: space-between;
-    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0,0.1);
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
     padding-inline: 1rem;
-    text-shadow: none;
-    font-family: 'Courier New', Courier, monospace;
+    /* Gradien diubah menjadi warna solid yang konsisten dengan tema */
+    background-color: #2a2a3e; 
+}
+
+/* Mengatur warna teks di navbar (Bootstrap override) */
+.navbar .nav-link {
+    color: #f0f0f0 !important;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #ffffff !important; /* Warna aksen saat di-hover atau aktif */
+}
+
+/* Mengatur warna teks "GUEST" (Bootstrap override) */
+.navbar .dropdown-toggle {
+    color: #f0f0f0 !important;
+}
+.navbar .dropdown-toggle:hover {
+    color: #00aaff !important;
+}
+
+/* Mengatur dropdown menu agar gelap */
+.dropdown-menu {
+    background-color: #2a2a3e;
+    border: 1px solid #444;
+}
+.dropdown-item {
+    color: #f0f0f0;
+}
+.dropdown-item:hover {
+    background-color: #00aaff;
+    color: #1a1a2e; /* Teks jadi gelap saat background hover terang */
 }
 
 .profile_icon {
@@ -42,13 +76,16 @@ header img {
     list-style: none;;
 }
 
+.navbar-toggler { /* ini buat mengganti warna background hamburger */
+  background-color: rgb(79, 79, 114);
+}
+
 /* ------------- penutup bagian navbar ------------- */
 
 .lacak {
     width: 100%;
-    background: linear-gradient(180deg, #232526, #414345);
     padding: 2rem 3rem;
-    box-shadow: 0px 5px 15px rgba(255, 255, 255, .3);
+    box-shadow: 0px 5px 20px rgba(255, 255, 255, .2);
 }
 
 .lacak h1 {
@@ -125,11 +162,10 @@ th,td {
 
 /* ------------- bagian footer ------------- */
 .footer {
-  background-color: rgb(234, 228, 228);
+  /* Warna footer disamakan dengan warna kartu/navbar */
+  background-color: #2a2a3e; 
   padding: 40px 40px 0px 40px;
   font-family: 'Courier New', Courier, monospace;
-  text-shadow: none;
-  color: black;
 }
 
 .container_1 {
@@ -149,6 +185,7 @@ th,td {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 15px;
+  color: #ffffff; /* Judul footer jadi putih */
 }
 
 .container_list {
@@ -157,15 +194,16 @@ th,td {
   margin: 0;
 }
 
-.container_list li a,
-.contailer_list li a {
+/* Perbaikan untuk typo 'contailer_list' dan pewarnaan link footer */
+.container_list li a {
   text-decoration: none;
-  color: black;
+  color: #f0f0f0; /* Tautan footer jadi terang */
+  font-family: 'Courier New', Courier, monospace !important; /* Pastikan font tetap */
 }
 
-.container_list li a:hover,
-.contailer_list li a:hover {
+.container_list li a:hover {
   text-decoration: underline;
+  color: #00aaff; /* Aksen biru saat di-hover */
 }
 
 .footer_img {
@@ -184,6 +222,7 @@ th,td {
   font-size: 14px;
   margin-top: 30px;
   padding-top: 15px;
-  border-top: 1px solid #bfbfbf;
+  border-top: 1px solid #444; /* Warna border yang lebih soft */
+  color: #aaaaaa; /* Warna teks copyright lebih redup */
 }
 
