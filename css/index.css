@@ -72,6 +72,12 @@ main {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Memberi bayangan agar menonjol */
 }
 
+.video-border {
+    border: 3px solid #00aaff; /* Border biru cerah */
+    /* Opsional: Anda bisa menambahkan glow lebih lanjut jika diinginkan */
+    box-shadow: 0 0 15px rgba(0, 170, 255, 0.7), 0 8px 20px rgba(0, 0, 0, 0.4); 
+}
+
 .audiowide-regular {
   font-family: "Audiowide", sans-serif;
   font-weight: 400;
