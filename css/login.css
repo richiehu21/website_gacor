@@ -1,11 +1,16 @@
 body {
     box-sizing: border-box;
+    /* Warna latar belakang utama yang sangat gelap */
+    background-color: rgb(26, 26, 46); 
+    /* Warna teks default untuk seluruh halaman */
+    color: #f0f0f0;
+    margin : 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Font sistem yang lebih modern */
     background:
-    linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
-    url("../asset/bgwallpaper.png") repeat;
+            linear-gradient(rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.7)),
+            url("../asset/bgwallpaper.png") repeat center center;
     overflow-x: hidden;
 }
-
 header img {
     filter: drop-shadow(0 0 1px black);
     margin-right: 20px; 
@@ -19,20 +24,111 @@ main {
     margin-inline: 3%;
 }
 
+/* ------------- bagian footer ------------- */
+.footer {
+  /* Warna footer disamakan dengan warna kartu/navbar */
+  background-color: #2a2a3e; 
+  padding: 40px 40px 0px 40px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.container_1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer_container {
+  flex: 1;
+  min-width: 220px;
+}
+
+.container_title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ffffff; /* Judul footer jadi putih */
+}
+
+.container_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Perbaikan untuk typo 'contailer_list' dan pewarnaan link footer */
+.container_list li a {
+  text-decoration: none;
+  color: #f0f0f0; /* Tautan footer jadi terang */
+  font-family: 'Courier New', Courier, monospace !important; /* Pastikan font tetap */
+}
+
+.container_list li a:hover {
+  text-decoration: underline;
+  color: #00aaff; /* Aksen biru saat di-hover */
+}
+
+.footer_img {
+  width: 28px;
+  margin-right: 10px;
+  transition: transform 0.2s;
+}
+
+.footer_img:hover {
+  transform: scale(1.1);
+}
+
+/* Copyright di bawah */
+.footer_copyright {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #444; /* Warna border yang lebih soft */
+  color: #aaaaaa; /* Warna teks copyright lebih redup */
+}
 
 /* ------------- bagian navbar ------------- */
 
 .navbar {
     display: flex;
     justify-content: space-between;
-    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0,0.1);
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
     padding-inline: 1rem;
-    z-index: 1;
+    /* Gradien diubah menjadi warna solid yang konsisten dengan tema */
+    background-color: #2a2a3e; 
 }
 
-.logo {
-    filter: drop-shadow(0 0 1px black);
-    margin-right: 20px; 
+/* Mengatur warna teks di navbar (Bootstrap override) */
+.navbar .nav-link {
+    color: #f0f0f0 !important;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #ffffff !important; /* Warna aksen saat di-hover atau aktif */
+}
+
+/* Mengatur warna teks "GUEST" (Bootstrap override) */
+.navbar .dropdown-toggle {
+    color: #f0f0f0 !important;
+}
+.navbar .dropdown-toggle:hover {
+    color: #00aaff !important;
+}
+
+/* Mengatur dropdown menu agar gelap */
+.dropdown-menu {
+    background-color: #2a2a3e;
+    border: 1px solid #444;
+}
+.dropdown-item {
+    color: #f0f0f0;
+}
+.dropdown-item:hover {
+    background-color: #00aaff;
+    color: #1a1a2e; /* Teks jadi gelap saat background hover terang */
 }
 
 .profile_icon {
@@ -44,15 +140,12 @@ main {
 }
 
 .nav-item { /* ini buat menghilangkan dot dibagian kiri button */
-    list-style: none;
+    list-style: none;;
 }
 
-.navbar li > a {
-    font-family: 'Courier New', Courier, monospace !important;
-    text-decoration: none;
-    color: #000000;
+.navbar-toggler { /* ini buat mengganti warna background hamburger */
+  background-color: rgb(79, 79, 114);
 }
-
 /* ------------- Penutup navbar ------------- */
 
 /* ================================================== */
@@ -61,13 +154,15 @@ main {
 
 .login-container {
     z-index: 1;
-    width: 600px;
+    max-width: 600px;
     margin: 80px auto;
     padding: 30px;
-    background-color: rgba(164, 183, 175, 0.907);
+    background-color: rgba(26, 26, 46, 1);
     box-shadow: 1px 8px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 .login-container h2 {
     text-align: center;
@@ -132,7 +227,7 @@ main {
     width: 100%;
     height: 100%;
     overflow: hidden; /* Sembunyikan logo yang keluar dari layar */
-    z-index: 0; /* Letakkan di belakang konten utama */
+    z-index: -1; /* Letakkan di belakang konten utama */
 }
 /* Style untuk setiap logo */
 .falling-logo {
