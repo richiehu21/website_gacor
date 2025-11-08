@@ -1,8 +1,6 @@
 body {
     box-sizing: border-box;
-    /* Warna latar belakang utama yang sangat gelap */
     background-color: rgb(26, 26, 46); 
-    /* Warna teks default untuk seluruh halaman */
     color: #f0f0f0;
     margin : 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Font sistem yang lebih modern */
@@ -13,7 +11,6 @@ body {
 }
 
 /* Header */
-/* Memastikan header, main, dan footer berada di atas animasi */
 header {
     position: relative;
     z-index: 3;
@@ -32,13 +29,11 @@ header img {
     margin-right: 20px; 
 }
 
-/* Mengganti font Courier New yang global menjadi lebih spesifik */
 .gametitle, 
 .footer {
     font-family: 'Courier New', Courier, monospace;
 }
 
-/* Tautan dasar (sekarang diatur di bagian spesifik seperti footer) */
 li > a {
     font-family: 'Courier New', Courier, monospace !important;
     text-decoration: none;
@@ -53,7 +48,6 @@ li > a:hover {
 main {
   padding-top: 1px;
   padding-inline: 3%;
-  /* Menghapus background gambar dan gradien agar animasi logo terlihat */
   background: transparent;
   padding-bottom: 100px;
 }
@@ -66,11 +60,9 @@ main {
     justify-content: space-between;
     box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
     padding-inline: 1rem;
-    /* Gradien diubah menjadi warna solid yang konsisten dengan tema */
     background-color: #2a2a3e; 
 }
 
-/* Mengatur warna teks di navbar (Bootstrap override) */
 .navbar .nav-link {
     color: #f0f0f0 !important;
 }
@@ -79,7 +71,6 @@ main {
     color: #ffffff !important; /* Warna aksen saat di-hover atau aktif */
 }
 
-/* Mengatur warna teks "GUEST" (Bootstrap override) */
 .navbar .dropdown-toggle {
     color: #f0f0f0 !important;
 }
@@ -87,7 +78,6 @@ main {
     color: #00aaff !important;
 }
 
-/* Mengatur dropdown menu agar gelap */
 .dropdown-menu {
     background-color: #2a2a3e;
     border: 1px solid #444;
@@ -184,7 +174,7 @@ main {
   margin: 0;
 }
 
-/* Perbaikan untuk typo 'contailer_list' dan pewarnaan link footer */
+
 .container_list li a {
   text-decoration: none;
   color: #f0f0f0; /* Tautan footer jadi terang */
@@ -206,7 +196,6 @@ main {
   transform: scale(1.1);
 }
 
-/* Copyright di bawah */
 .footer_copyright {
   text-align: center;
   font-size: 14px;
@@ -232,11 +221,9 @@ main {
     width: 100%;
     height: 100%;
     overflow: hidden; 
-    /* PERUBAHAN PENTING: Atur z-index ke 1 agar di belakang konten */
     z-index: 1; 
 }
 
-/* Style untuk setiap logo */
 .falling-logo {
     position: absolute;
     top: -15%; 

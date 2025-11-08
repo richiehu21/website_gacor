@@ -1,9 +1,8 @@
-/* ================================== */
-/* CSS TEMA UTAMA (rast7-theme.css) */
-/* ================================== */
+
+/* CSS TEMA UTAMA  */
 body {
-    background-color: #FAFAFA; /* Latar belakang abu-abu sangat muda */
-    color: #333333; /* Teks gelap */
+    background-color: #FAFAFA;
+    color: #333333;
     font-family: "Segoe UI", Helvetica, Arial, sans-serif;
     background:
             linear-gradient(rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.7)),
@@ -23,7 +22,6 @@ header img {
     justify-content: space-between;
     box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
     padding-inline: 1rem;
-    /* Gradien diubah menjadi warna solid yang konsisten dengan tema */
     background-color: #2a2a3e; 
     font-family: 'Courier New', Courier, monospace !important;
 }
@@ -34,7 +32,7 @@ header img {
 }
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
-    color: #ffffff !important; /* Warna aksen saat di-hover atau aktif */
+    color: #ffffff !important;
 }
 
 /* Mengatur warna teks "GUEST" (Bootstrap override) */
@@ -55,7 +53,7 @@ header img {
 }
 .dropdown-item:hover {
     background-color: #00aaff;
-    color: #1a1a2e; /* Teks jadi gelap saat background hover terang */
+    color: #1a1a2e;
 }
 
 .profile_icon {
@@ -77,7 +75,7 @@ header img {
 /* ------------- penutup bagian navbar ------------- */
 
 
-/* --- Tombol Utama (Bisa dipakai di semua halaman) --- */
+/* --- Tombol Utama  --- */
 .btn-redeem {
     background-color: #FFFFFF;
     border: none;
@@ -127,16 +125,16 @@ header img {
   margin: 0;
 }
 
-/* Perbaikan untuk typo 'contailer_list' dan pewarnaan link footer */
+
 .container_list li a {
   text-decoration: none;
-  color: #f0f0f0; /* Tautan footer jadi terang */
-  font-family: 'Courier New', Courier, monospace !important; /* Pastikan font tetap */
+  color: #f0f0f0;
+  font-family: 'Courier New', Courier, monospace !important; 
 }
 
 .container_list li a:hover {
   text-decoration: underline;
-  color: #00aaff; /* Aksen biru saat di-hover */
+  color: #00aaff; /* warna biru saat di-hover */
 }
 
 .footer_img {
@@ -149,21 +147,19 @@ header img {
   transform: scale(1.1);
 }
 
-/* Copyright di bawah */
 .footer_copyright {
   text-align: center;
   font-size: 14px;
   margin-top: 30px;
   padding-top: 15px;
-  border-top: 1px solid #444; /* Warna border yang lebih soft */
-  color: #aaaaaa; /* Warna teks copyright lebih redup */
+  border-top: 1px solid #444;
+  color: #aaaaaa;
 }
 
 /* Penutup Footer */
 
 /*
  * CSS Khusus untuk Halaman Konfirmasi Pembayaran
- * (payment-confirmation.css)
  */
 
 /* Tata letak halaman utama */
@@ -171,7 +167,7 @@ header img {
     padding: 40px 0; /* Memberi spasi di atas dan bawah */
 }
 
-/* Kartu utama yang membungkus konten (pengganti modal) */
+/* Kartu utama */
 .payment-card {
     background-color: #2a2a3e; 
     border: 1px solid #40405a; 
@@ -195,7 +191,7 @@ header img {
     padding: 1.5rem;
 }
 
-/* (Aturan Baru) Mengatur text-muted di tema gelap */
+/* Mengatur text-muted  */
 .payment-card-body .text-muted {
     color: #ADB5BD !important; 
 }
@@ -209,8 +205,6 @@ header img {
     border-bottom-right-radius: 12px;
 }
 
-/* --- Style-style di bawah ini disalin dari modal sebelumnya --- */
-/* --- dan berfungsi sama persis --- */
 
 /* --- Kotak Item (28 Diamonds) --- */
 .item-box {
@@ -296,5 +290,5 @@ header img {
     margin-bottom: 0;
     font-weight: 700;
     color: #FFFFFF; 
-    font-size: 2rem; /* Dibuat besar dan jelas */
+    font-size: 2rem;
 }

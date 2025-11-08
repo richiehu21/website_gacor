@@ -32,13 +32,11 @@ header img {
     margin-right: 20px; 
 }
 
-/* Mengganti font Courier New yang global menjadi lebih spesifik */
 .gametitle, 
 .footer {
     font-family: 'Courier New', Courier, monospace;
 }
 
-/* Tautan dasar (sekarang diatur di bagian spesifik seperti footer) */
 li > a {
     font-family: 'Courier New', Courier, monospace !important;
     text-decoration: none;
@@ -70,7 +68,6 @@ main {
     background-color: #2a2a3e; 
 }
 
-/* Mengatur warna teks di navbar (Bootstrap override) */
 .navbar .nav-link {
     color: #f0f0f0 !important;
 }
@@ -79,7 +76,6 @@ main {
     color: #ffffff !important; /* Warna aksen saat di-hover atau aktif */
 }
 
-/* Mengatur warna teks "GUEST" (Bootstrap override) */
 .navbar .dropdown-toggle {
     color: #f0f0f0 !important;
 }
@@ -87,7 +83,6 @@ main {
     color: #00aaff !important;
 }
 
-/* Mengatur dropdown menu agar gelap */
 .dropdown-menu {
     background-color: #2a2a3e;
     border: 1px solid #444;
@@ -167,8 +162,6 @@ main {
     border: 0;                 /* Hapus border bawaan */
     height: 2px;               /* Atur ketebalan garis */
     background-color: #555;    /* Ganti dengan warna yang Anda suka */
-    
-    /* Baris di bawah ini meniru style Anda (lebar 50% dan di tengah) */
     width: 50%;
     margin: 25px auto;         /* Memberi jarak atas/bawah 25px, dan 'auto' membuatnya ke tengah */
 }
@@ -208,7 +201,6 @@ main {
   margin: 0;
 }
 
-/* Perbaikan untuk typo 'contailer_list' dan pewarnaan link footer */
 .container_list li a {
   text-decoration: none;
   color: #f0f0f0; /* Tautan footer jadi terang */
@@ -257,11 +249,9 @@ main {
     width: 100%;
     height: 100%;
     overflow: hidden; 
-    /* PERUBAHAN PENTING: Atur z-index ke 1 agar di belakang konten */
     z-index: 1; 
 }
 
-/* Style untuk setiap logo */
 .falling-logo {
     position: absolute;
     top: -15%; 
@@ -277,7 +267,7 @@ main {
         opacity: 0.5;
     }
 }
-/* VARIASI LOGO (Tidak diubah) */
+
 .falling-logo:nth-child(1) {
     left: 10%; 
     animation-duration: 15s; 

@@ -30,11 +30,10 @@ header img {
     justify-content: space-between;
     box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
     padding-inline: 1rem;
-    /* Gradien diubah menjadi warna solid yang konsisten dengan tema */
     background-color: #2a2a3e; 
 }
 
-/* Mengatur warna teks di navbar (Bootstrap override) */
+
 .navbar .nav-link {
     color: #f0f0f0 !important;
 }
@@ -43,7 +42,7 @@ header img {
     color: #ffffff !important; /* Warna aksen saat di-hover atau aktif */
 }
 
-/* Mengatur warna teks "GUEST" (Bootstrap override) */
+
 .navbar .dropdown-toggle {
     color: #f0f0f0 !important;
 }
@@ -51,7 +50,7 @@ header img {
     color: #00aaff !important;
 }
 
-/* Mengatur dropdown menu agar gelap */
+
 .dropdown-menu {
     background-color: #2a2a3e;
     border: 1px solid #444;
@@ -162,7 +161,6 @@ th,td {
 
 /* ------------- bagian footer ------------- */
 .footer {
-  /* Warna footer disamakan dengan warna kartu/navbar */
   background-color: #2a2a3e; 
   padding: 40px 40px 0px 40px;
   font-family: 'Courier New', Courier, monospace;
@@ -194,7 +192,6 @@ th,td {
   margin: 0;
 }
 
-/* Perbaikan untuk typo 'contailer_list' dan pewarnaan link footer */
 .container_list li a {
   text-decoration: none;
   color: #f0f0f0; /* Tautan footer jadi terang */
@@ -216,7 +213,7 @@ th,td {
   transform: scale(1.1);
 }
 
-/* Copyright di bawah */
+
 .footer_copyright {
   text-align: center;
   font-size: 14px;
